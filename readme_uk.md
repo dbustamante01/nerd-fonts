@@ -9,11 +9,11 @@
 
 [Релізи][release] &nbsp;&nbsp;|&nbsp;&nbsp; [Шрифти](#patched-fonts) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Патчер Шрифтів](#font-patcher) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; [Wiki Документація][wiki] &nbsp;&nbsp;| &nbsp;&nbsp;[ Стікери][stickers]&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; [VimDevIcons][vim-devicons]
 
-[![GitHub Реліз][img-version-badge]][repo] [![Gitter][img-gitter-badge]][gitter] [![Build Status][img-travis-ci]][travis-ci] [![Code of Conduct][coc-badge]][coc] [![PRs Welcome][prs-badge]][prs]  <a href="#patched-fonts" title=""><img src="https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/images/faux-shield-badge-os-logos.svg?sanitize=true" alt="Nerd Fonts - підтримка операційных систем"></a> [![Twitter][twitter-badge]][twitter-intent]
+[![GitHub Реліз][img-version-badge]][repo] [![Gitter][img-gitter-badge]][gitter] [![Code of Conduct][coc-badge]][coc] [![PRs Welcome][prs-badge]][prs]  <a href="#patched-fonts" title=""><img src="https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/images/faux-shield-badge-os-logos.svg?sanitize=true" alt="Nerd Fonts - підтримка операційных систем"></a> [![Twitter][twitter-badge]][twitter-intent]
 
 </div>
 
-**Nerd Fonts** це проект, який виправляє шрифти для розробників за допомогою великої кількісті гліфів (інакше кажучи іконок). Спеціально для додавання великої кількості додаткових гліфів від популярних 'іконних шрифтів' такі як [Font Awesome ➶][font-awesome], [Devicons ➶][vorillaz-devicons], [Octicons ➶][octicons], та [інші](#glyph-sets).
+**Nerd Fonts** це проект, який виправляє шрифти для розробників за допомогою великої кількісті гліфів (інакше кажучи іконок). Спеціально для додавання великої кількості додаткових гліфів від популярних 'іконних шрифтів' таких як [Font Awesome ➶][font-awesome], [Devicons ➶][vorillaz-devicons], [Octicons ➶][octicons], та [інших](#glyph-sets).
 
 Наступна Sankey flow діаграма показує включені поточні набори гліфів:
 
@@ -25,21 +25,21 @@
 ## Важливі повідомлення
 
 -   шляхи до файлів в гілці `master` **не** вважаються стабільними. [Verify your repository URI references](#unstable-file-paths)
--   клонування ціеї репозиторії **не** рекомендується ([через розміри репозиторії](#option-5-clone-the-repo)) якщо тільки ти не будеш [розвивати проект](#contributing)
+-   клонування цього репозиторію **не** рекомендується ([через розміри репозиторію](#option-5-clone-the-repo)) якщо тільки ви не плануєте [розвивати проект](#contributing)
 
 ## Зміст
 
 [**Надто довго. Не читав**](#tldr)
 
-[**Настройки по установці**](#font-installation)
+[**Налаштування по установці**](#font-installation)
 
 -   [**1 - Посібник**](#option-1-download-and-install-manually)
 -   [**2 - Архів завантажень релізів**](#option-2-release-archive-download)
 -   [**3 - Установчі скрипти**](#option-3-install-script)
--   [**4 - Рідні шрифти (macOS (OS X))**](#option-4-homebrew-fonts)
--   [**5 - Клонування репозиторії**](#option-5-clone-the-repo)
+-   [**4 - Нативні шрифти (macOS (OS X))**](#option-4-homebrew-fonts)
+-   [**5 - Клонування репозиторію**](#option-5-clone-the-repo)
 -   [**6 - Конкретний випадок завантаження за допомогою Curl**](#option-6-ad-hoc-curl-download)
--   [**7 - Репозиторія користувачів Arch (AUR) (Arch Linux)**](#option-7-unofficial-arch-user-repository-aur)
+-   [**7 - Репозиторій користувачів Arch (Community) (Arch Linux)**](#варіант-7-неофіційні-репозиторії-користувачів-arch-community`)
 -   [**8 - Налаштуйте свій власний шрифт**](#option-8-patch-your-own-font)
 
 [**Особливості**](#features)
@@ -52,9 +52,9 @@
 [**Розробник/Контриб'ютор**](#font-patcher)
 
 -   [**Патчер шрифтів**](#font-patcher)
--   [**Збираємося патчить їх всіх, Патчер Всіх Шрифтів!**](#gotta-patch-em-all)
--   [**Інші хороші шріфті для патча**](#other-good-fonts-to-patch)
--   [**Контриб'юция**](#contributing)
+-   [**Збираємося патчить їх всіх, Патчер Усіх Шрифтів!**](#gotta-patch-em-all)
+-   [**Інші хороші шрифти для патча**](#other-good-fonts-to-patch)
+-   [**Розвиток проекту**](#contributing)
 
 [**Мотивація проекту**](#project-motivation)
 
@@ -67,7 +67,7 @@
 ## Надто довго. Не читав
 
   Nerd Fonts використовує популярні програмні шрифти і додає купу Значків.
-  Існує також [патчер шрифтів](#font-patcher) доступний, якщо бажаний шрифт ще не виправлений.
+  Існує також [патчер шрифтів](#font-patcher), якщо бажаний шрифт ще не виправлений.
   Для отримання більш детальної інформації дивись [wiki][wiki]. Якщо ви шукаєте плагін Vim, дивись [VimDevIcons ➶][vim-devicons].
 
 ### Різні параметри завантаження шрифтів
@@ -75,26 +75,26 @@
 _Якщо ви..._
 
 -   `Варіант 1.` бажаю **швидко** завантажити **індивідуальний шрифт** з [`patched-fonts/` каталогу](#patched-fonts)
--   `Варіант 2.` бажаю завантажити **сімейство шрифтів** пакет варіацій (жирний, курсив тощо.) дивись [завантажити архів](#option-2-release-archive-download)
--   `Варіант 3.` бажаю **автоматизувати** встановлення або використання в **скриптах** дивись [Встановити скрипти](#option-3-install-script)
--   `Варіант 4.` Я на **macOS** та бажаю використовувати **рідні шрифти** дивись [Рідні Шрифти](#option-4-homebrew-fonts)
--   `Варіант 5.` бажаю **повний контроль** дивись [клонування репозиторії](#option-5-clone-the-repo)
+-   `Варіант 2.` бажаю завантажити пакет варіацій **сімейства шрифтів** (жирний, курсив, тощо), дивись [завантажити архів](#option-2-release-archive-download)
+-   `Варіант 3.` бажаю **автоматизувати** встановлення або використання в **скриптах**, дивись [Встановити скрипти](#option-3-install-script)
+-   `Варіант 4.` Я на **macOS** та бажаю використовувати **нативні шрифти**, дивись [Нативні Шрифти](#option-4-homebrew-fonts)
+-   `Варіант 5.` бажаю **повний контроль**, дивись [клонування репозиторії](#option-5-clone-the-repo)
 -   `Варіант 6.` бажаю використовувати **`curl` команду** або використовувати в **скриптах** дивись [Конкретний випадок завантаження за допомогою Curl](#option-6-ad-hoc-curl-download)
--   `Варіант 7.` Я на **Arch Linux** та бажаю використовувати **AUR packages** дивись [Неофіційні репозиторії користувачів Arch](#option-7-unofficial-arch-user-repository-aur)
--   `Варіант 8.` бажаю патчити власний шрифт дивись [Патчер шрифтів](#option-8-patch-your-own-font)
+-   `Варіант 7.` Я на **Arch Linux** та бажаю використовувати **Community packages**, дивись [Неофіційні репозиторії користувачів Arch](#варіант-7-неофіційні-репозиторії-користувачів-arch-community`)
+-   `Варіант 8.` Бажаю пропатчити власний шрифт, дивись [Патчер шрифтів](#option-8-patch-your-own-font)
 
 ## Особливості
 
 -   [FontForge Python script](#font-patcher) щоб патчити будь-який шрифт
-    -   Включає можливість створення **Monospaced (фіксований крок, фіксована ширина)** _чи_ **подвійної ширини (non-monospaced)** glyphs
-    -   Докладніше дивись [**Патчер шрифтів**](#font-patcher) розділ
+    -   Включає можливість створення **Monospaced (фіксованої ширини)** _чи_ **подвійної ширини (non-monospaced)** glyphs
+    -   Докладніше дивись розділ [**Патчер шрифтів**](#font-patcher)
 -   **`50`** вже [виправлені сімейства шрифтів ](#patched-fonts)
--   Понад **`1,571,470`** унікальні комбінації / варіації пропатченних шрифтів [(детальніше)](#combinations)
--   Понад **`2,600`** гліфи / іконки у поєднанні [(детальніше)](#combinations)
-    -   Поточні набори гліфів включають: [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome], [Material Design Icons][font-material-design-icons], [Weather][font-weather], [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-linux] (Раніше [Font Linux][font-linux]), [Pomicons][gabrielelana-pomicons]
--   **Monospaced (фіксований крок, фіксована ширина)** _чи_ **подвійної ширини (non-monospaced)** версія кожного шрифту
-    -   Це стосується Nerd Font самі гліфи не обов'язково Шрифт в цілому
--   Розробник/Контриб'ютор постачає [bash скріпт](#gotta-patch-em-all)щоб повторно пропатчити всі шрифти
+-   Понад **`1,571,470`** унікальних комбінацій / варіацій пропатченних шрифтів [(детальніше)](#combinations)
+-   Понад **`9,000`** гліфів / іконок у поєднанні [(детальніше)](#combinations)
+    -   Поточні набори гліфів включають: [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome], [Material Design Icons][font-material-design-icons], [Weather][font-weather], [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-logos] (Раніше Font Linux), [Pomicons][gabrielelana-pomicons]
+-   **Monospaced (фіксованої ширини)** _чи_ **подвійної ширини (non-monospaced)** версія кожного шрифту
+    -   Це стосується Nerd Font гліфів, але не обов'язково Шрифту в цілому
+-   Розробник/Контриб'ютор постачає [bash скріпт](#gotta-patch-em-all) щоб повторно пропатчити всі шрифти
 
 ## Набори гліфів
 
@@ -112,7 +112,7 @@ _Якщо ви..._
 | :------------------------------------------------ | :--------------------------------- | :---- | :------ | :--------------- |
 | [3270 Nerd Font][p-3270]                          | [3270][f-3270]                     | NO    | 1000    | ![w] ![m2] ![l]  |
 | [Agave][p-agave]                                  | [Agave][f-agave]                   | NO    | 2048    | ![w] ![m2] ![l]  |
-| [Anonymice Nerd Font][p-anonymous-pro]            | [Anonymous Pro][f-a-pro]           | NO    | 2048    | ![w] ![m2] ![l]  |
+| [AnonymicePro Nerd Font][p-anonymous-pro]         | [Anonymous Pro][f-a-pro]           | NO    | 2048    | ![w] ![m2] ![l]  |
 | [Arimo][p-arimo]                                  | [Arimo][f-arimo]                   | NO    | 2048    | ![w] ![m2] ![l]  |
 | [Aurulent Sans Mono Nerd Font][p-aurulent]        |                                    | NO    | 1000    | ![w] ![m2] ![l]  |
 | [BigBlueTerminal][p-bigblueterm]                  |                                    | NO    | 1200    | ![w] ![m2] ![l]  |
@@ -121,6 +121,7 @@ _Якщо ви..._
 | [Code New Roman Nerd Font][p-code-nr]             |                                    | NO    | 2048    | ![w] ![m2] ![l]  |
 | [Cousine Nerd Font][p-cousine]                    | [Cousine][f-cousine]               | NO    | 1000    | ![w] ![m2] ![l]  |
 | [DaddyTimeMono][p-daddytimemono]                  | [DaddyTimeMono][f-daddytimemono]   | NO    | 1024    | ![w] ![m2] ![l]  |
+| [DepartureMono Nerd Font][p-departuremono]        | [Departure Mono][f-departuremono]  | NO    | 550     | ![w] ![m2] ![l]  |
 | [DejaVu Sans Mono Nerd Font][p-dejavu]            |                                    | NO    | 2048    | ![w] ![m2] ![l]  |
 | [Droid Sans Mono Nerd Font][p-droid]              |                                    | NO    | 2048    | ![w] ![m2] ![l]  |
 | [Fantasque Sans Nerd Font][p-fantasque]           | [Fantasque Sans][f-fant]           | NO    | 2048    | ![w] ![m2] ![l]  |
@@ -165,12 +166,12 @@ _Якщо ви..._
 
 ## Комбінації
 
--   Понад **`1,571,470`** унікальні варіанти / комбінації (Power Set) пропатченних шрифтів:
+-   Понад **`1,485,000`** унікальні варіанти / комбінації (Power Set) пропатченних шрифтів:
     -   **`50`** пропатченних типів шрифтів
-    -   **`697`** пропатченних сімейства шрифтів
-    -   **`2,788`** 'завершених' варіації / комбінації
-    -   **`1,571,470`** _можливих_ варіації / комбінації
-    -   **`1,574,258`** загальна кількість обчислених комбінацій (2,788 + 1,571,470)
+    -   **`719`** пропатченних сімейств шрифтів
+    -   **`2,876`** 'завершених' варіацій / комбінацій
+    -   **`1,485,410`** _можливих_ варіацій / комбінацій
+    -   **`1,488,286`** загальна кількість обчислених комбінацій (2,876 + 1,485,410)
 -   Комбінації для кожного шрифту - це будь-яка комбінація [варіації](#variations)
 
 ### Варіації
@@ -182,7 +183,7 @@ _Якщо ви..._
 -   [Material Design Icons][font-material-design-icons]
 -   [Weather][font-weather]
 -   [GitHub Octicons][octicons]
--   [Font Logos][font-linux] (Раніше [Font Linux][font-linux])
+-   [Font Logos][font-logos] (Раніше Font Linux)
 -   [Powerline Extra Symbols][ryanoasis-powerline-extra-symbols]
 -   [IEC Power Symbols][website-iecpower]
 -   [Pomicons][gabrielelana-pomicons]
@@ -190,11 +191,11 @@ _Якщо ви..._
 
 ## Встановлення шрифту
 
-### `Варіант 1: Завантажте та встановіть вручну`
+### `Варіант 1: Завантажити та встановити самостійно`
 
-> Найкращий варіант для **швидко** завантажити **індивідуальний шрифт**.
+> Найкращий варіант для **швидкого** завантаження **індивідуального шрифта**.
 
-Завантаж конкретний [пропатченний шрифт](#patched-fonts) на ваш вибір
+Завантажте конкретний [пропатченний шрифт](#patched-fonts) на ваш вибір
 
 ### `Варіант 2: Завантажити реліз архіву`
 
@@ -207,7 +208,7 @@ _Якщо ви..._
 > Найкращий варіант, якщо ви хочете **автоматизувати** встановлення або для використання в **скриптах**.
 
 _Примітка_: Лише для Linux та macOS (OS X)
-_Примітка_: **необхідне клонування** репозиторії станом на даний час
+_Примітка_: **необхідне клонування** репозиторію станом на даний час
 
 #### Усі шрифти:
 
@@ -227,24 +228,23 @@ _Примітка_: **необхідне клонування** репозито
 ./install.sh HeavyData
 ```
 
-### `Варіант 4:  Рідні шрифти `
+### `Варіант 4:  Нативні шрифти `
 
-> Найкращий варіант, якщо ти використовуєш  **macOS** і хочете використовувати **рідні шрифти**.
+> Найкращий варіант, якщо ви використовуєте  **macOS** і хочете використовувати **нативні шрифти**.
 
-Усі шрифти доступні через [рідні Cask Fonts](https://github.com/Homebrew/homebrew-cask-fonts) on macOS (OS X)
+Усі шрифти доступні через [нативні Cask](https://github.com/Homebrew/homebrew-cask) on macOS (OS X)
 
 ```sh
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+brew install font-hack-nerd-font
 ```
 
-### `Варіант 5: Клонування репозиторії`
+### `Варіант 5: Клонування репозиторію`
 
-> Найкращий варіант для **повний контроль**, **всі** чи **майже всі** шрифти, чи **контриб'юції** до розробки.
+> Найкращий варіант для **повного контролю**, **всіх** чи **майже всіх** шрифтів, чи **контриб'юції** до розробки.
 
-Клонування ціеї репозиторії **не** не потрібні, ані ефективні (в основному за рахунок розміру репозиторії) якщо вас просто цікавить лише обмежений набір шрифтів.
+Клонування цього репозиторію **не** не потрібне (в основному за рахунок розміру репозиторію) якщо вас просто цікавить обмежений набір шрифтів.
 
-Однак якщо ви хочете клонувати РЕПО, не забудьте зробити це _неглибоке_ клонування:
+Однак якщо ви хочете клонувати увесь проект, не забудьте зробити _неглибоке_ клонування:
 
 ```sh
 git clone --depth 1
@@ -258,7 +258,7 @@ git clone --depth 1
 
 ```sh
 mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
 _Примітка:_ застарілі альтернативні шляхи: `~/.fonts`
@@ -266,37 +266,23 @@ _Примітка:_ застарілі альтернативні шляхи: `~
 #### macOS (OS X)
 
 ```sh
-cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
-### `Варіант 7: Неофіційні репозиторії користувачів Arch (AUR)`
+### `Варіант 7: Неофіційні репозиторії користувачів Arch (Community)`
 
-> Варіант для **Arch Linux** і бажання використовувати **AUR пакети**.
-
-Наступні шрифти доступні через [AUR пакети](https://aur.archlinux.org/) на Arch Linux:
-
--   [Nerd Fonts Complete (подвійної ширини)](https://aur.archlinux.org/packages/nerd-fonts-complete/)
--   [Nerd Fonts Complete (одинарної ширини)](https://aur.archlinux.org/packages/nerd-fonts-complete-mono-glyphs/)
--   [Nerd Fonts DejaVu Complete](https://aur.archlinux.org/packages/nerd-fonts-dejavu-complete/)
--   [Nerd Fonts Source Code Pro Complete](https://aur.archlinux.org/packages/nerd-fonts-source-code-pro/)
--   [Nerd Fonts Git (застарілий)](https://aur.archlinux.org/packages/nerd-fonts-git/)
--   [Nerd Fonts Fira Code](https://aur.archlinux.org/packages/nerd-fonts-fira-code/)
--   [Nerd Fonts Terminus](https://aur.archlinux.org/packages/nerd-fonts-terminus/)
--   [Nerd Fonts Liberation Mono](https://aur.archlinux.org/packages/nerd-fonts-liberation-mono/)
--   [Nerd Fonts Go Mono](https://aur.archlinux.org/packages/nerd-fonts-go-mono/)
--   [Nerd Fonts Anonymous Pro](https://aur.archlinux.org/packages/nerd-fonts-anonymous-pro/)
--   [Nerd Fonts Noto](https://aur.archlinux.org/packages/nerd-fonts-noto/)
--   [Nerd Fonts Inconsolata](https://aur.archlinux.org/packages/nerd-fonts-inconsolata/)
+Most fonts are available via [Arch Community packages](https://archlinux.org/packages/?sort=&repo=Community&q=-nerd).
+Some special packages are [in AUR](https://aur.archlinux.org/packages?K=nerd-fonts-&outdated=off).
 
 ### `Варіант 8: Налаштуйте свій власний шрифт`
 
 > Варіант для **пропатчити** твій **особистий шрифт** чи повністю **налаштувати** пропатченний шрифт.
 
-Використовуйте наданий сценарій командної строки Python, щоб створити виправлений шрифт із власного шрифту, щоб отримати нові доповненні гліфи
+Використовуйте наданий сценарій командної строки Python, щоб створити виправлений шрифт із власного, щоб отримати нові доповненні гліфи
 
 Дивіться: [Патчер шрифтів](#font-patcher) для використання
 
--   використовуйте цю опцію, якщо ви **не** бажаете використовувати один із [наданих шрифтів](#patched-fonts)
+-   оберіть цю опцію, якщо ви **не** бажаєте використовувати один із [наданих шрифтів](#patched-fonts)
 -   вам все одно доведеться скопіювати згенерований шрифт у правильну директорію шрифтів у вашій системі
 
 <h2 align="center" id="font-patcher">
@@ -305,8 +291,8 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 Виправлення шрифту за власним вибором для використання з [VimDevIcons ➶][vim-devicons]:
 
--   вимагає: Python 2 (чи Python 3), `python-fontforge` пакет (версіі `20141231` чи пізніше, дивись [інструкції по встановленню](http://designwithfontforge.com/en-US/Installing_Fontforge.html))
--   альтернативний метод установки на OSX: `brew install fontforge`
+-   вимагає: Python 3, `python-fontforge` пакет (версіі `20141231` чи пізніше, дивись [інструкції по встановленню](http://designwithfontforge.com/en-US/Installing_Fontforge.html))
+-   альтернативний метод інсталювання на OSX: `brew install fontforge`
 -   Використання:
 
 ```
@@ -317,71 +303,81 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 ```
     ./fontforge -script font-patcher ШЛЯХ_ДО_ШРИФТА
 
-    usage: font-patcher [-h] [-v] [-s] [-l] [-q] [-w] [-c] [--fontawesome]
-                        [--fontawesomeextension] [--fontlinux] [--octicons]
-                        [--powersymbols] [--pomicons] [--powerline]
-                        [--powerlineextra] [--material] [--weather]
-                        [--custom [CUSTOM]] [--postprocess [POSTPROCESS]]
-                        [--removeligs] [--configfile [CONFIGFILE]]
-                        [--progressbars | --no-progressbars] [--careful]
-                        [-ext [EXTENSION]] [-out [OUTPUTDIR]]
-                        font
+Nerd Fonts Patcher v3.0.2 (4.4.0) (ff 20230101)
+usage: font-patcher [-h] [-v] [-s] [-l] [-q] [-c] [--careful] [--removeligs] [--postprocess [POSTPROCESS]] [--configfile [CONFIGFILE]] [--custom [CUSTOM]]
+                    [-ext [EXTENSION]] [-out [OUTPUTDIR]] [--glyphdir [GLYPHDIR]] [--makegroups [{-1,0,1,2,3,4,5,6}]] [--variable-width-glyphs]
+                    [--has-no-italic] [--progressbars | --no-progressbars] [--debug [{0,1,2,3}]] [--dry] [--xavgcharwidth [XAVGWIDTH]] [--fontawesome]
+                    [--fontawesomeextension] [--fontlogos] [--octicons] [--codicons] [--powersymbols] [--pomicons] [--powerline] [--powerlineextra]
+                    [--material] [--weather]
+                    font
 
-    Nerd Fonts Font Patcher: виправляє заданий шрифт програмістами та гліфами, пов'язаними з розробкою
+Nerd Fonts Font Patcher: patches a given font with programming and development related glyphs
 
-    * Веб-сайт: https://www.nerdfonts.com
-    * Версія: 2.0.0
-    * Веб-сайт для розробки: https://github.com/ryanoasis/nerd-fonts
-    * Журнал змін: https://github.com/ryanoasis/nerd-fonts/blob/master/changelog.md
+* Website: https://www.nerdfonts.com
+* Version: 3.0.2
+* Development Website: https://github.com/ryanoasis/nerd-fonts
+* Changelog: https://github.com/ryanoasis/nerd-fonts/blob/-/changelog.md
 
-    позиційні аргументи:
-      font                  Шлях до шрифту для виправлення (наприклад Inconsolata.otf)
+positional arguments:
+  font                  The path to the font to patch (e.g., Inconsolata.otf)
 
-    необов'язкові аргументи:
-      -h, --help            показати це довідкове повідомлення та завершує виконання
-      -v, --version         показати номер версії програми та завершує виконання
-      -s, --mono, --use-single-width-glyphs
-                            Чи генерувати гліфи як одноширочну, а не подвійну(зазвичай double-width)
-      -l, --adjust-line-height
-                            Чи регулювати висоту лінії (намагання більш рівномірно централізувати розподільчі лінії)
-      -q, --quiet, --shutup
-                            Не генерувати звіт
-      -w, --windows         Обмежте внутрішнє ім'я шрифту до 31 символу (для сумісністі з Windows)
-      -c, --complete        Додайте всі доступні гліфи
-      --fontawesome         Додайте Font Awesome гліфи (http://fontawesome.io/)
-      --fontawesomeextension
-                            Додайте Font Awesome Extension гліфи (https://andrelzgava.github.io/font-awesome-extension/)
-      --fontlinux, --fontlogos
-                            Додайте Font Linux та шнші open source гліфи (https://github.com/Lukas-W/font-logos)
-      --octicons            Додайте Octicons гліфи (https://octicons.github.com)
-      --powersymbols        Додайте IEC Power Symbols (https://unicodepowersymbol.com/)
-      --pomicons            Додайте Pomicon гліфи (https://github.com/gabrielelana/pomicons)
-      --powerline           Додайте Powerline гліфи
-      --powerlineextra      Додайте Powerline гліфи (https://github.com/ryanoasis/powerline-extra-symbols)
-      --material, --materialdesignicons, --mdi
-                            Додайте Material Design іконки (https://github.com/templarian/MaterialDesign)
-      --weather, --weathericons
-                            Додайте Weather іконки (https://github.com/erikflowers/weather-icons)
-      --custom [CUSTOM]     Вкажіть спеціальний шрифт символу. Усі нові гліфи будуть скопійовані без масштабування.
-      --postprocess [POSTPROCESS]
-                            Вкажіть скріпт для постобробки
-      --removeligs, --removeligatures
-                            Видаляє лігатури, вказані у файлі конфігурації JSON
-      --configfile [CONFIGFILE]
-                            Вкажіть шлях до файлу конфігурації JSON (див. зразок: src/config.sample.json)
-      --progressbars        Показати відсоткові смуги виконання обробки кожного гліфу
-      --no-progressbars     Не показувати відсоткові смуги виконання обробки кожного гліфу
-      --careful             Не перезаписуйте наявні гліфи, якщо вони виявлені
-      -ext [EXTENSION], --extension [EXTENSION]
-                            Змініть тип файлу шрифту для створення (наприклад, ttf, otf)
-      -out [OUTPUTDIR], --outputdir [OUTPUTDIR]
-                            Каталог для виводу виправленого файлу шрифту
+options:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -s, --mono            Whether to generate the glyphs as single-width not double-width (default is double-width)
+  -l, --adjust-line-height
+                        Whether to adjust line heights (attempt to center powerline separators more evenly)
+  -q, --quiet, --shutup
+                        Do not generate verbose output
+  -c, --complete        Add all available Glyphs
+  --careful             Do not overwrite existing glyphs if detected
+  --removeligs, --removeligatures
+                        Removes ligatures specificed in JSON configuration file
+  --postprocess [POSTPROCESS]
+                        Specify a Script for Post Processing
+  --configfile [CONFIGFILE]
+                        Specify a file path for JSON configuration file (see sample: src/config.sample.json)
+  --custom [CUSTOM]     Specify a custom symbol font, all glyphs will be copied; absolute path suggested
+  -ext [EXTENSION], --extension [EXTENSION]
+                        Change font file type to create (e.g., ttf, otf)
+  -out [OUTPUTDIR], --outputdir [OUTPUTDIR]
+                        The directory to output the patched font file to
+  --glyphdir [GLYPHDIR]
+                        Path to glyphs to be used for patching
+  --makegroups [{-1,0,1,2,3,4,5,6}]
+                        Use alternative method to name patched fonts (recommended)
+  --variable-width-glyphs
+                        Do not adjust advance width (no "overhang")
+  --has-no-italic       Font family does not have Italic (but Oblique)
+  --progressbars        Show percentage completion progress bars per Glyph Set (default)
+  --no-progressbars     Don't show percentage completion progress bars per Glyph Set
+  --debug [{0,1,2,3}]   Verbose mode (optional: 1=just to file; 2*=just to terminal; 3=display and file)
+  --dry                 Do neither patch nor store the font, to check naming
+  --xavgcharwidth [XAVGWIDTH]
+                        Adjust xAvgCharWidth (optional: concrete value)
+
+Symbol Fonts:
+  --fontawesome         Add Font Awesome Glyphs (http://fontawesome.io/)
+  --fontawesomeextension
+                        Add Font Awesome Extension Glyphs (https://andrelzgava.github.io/font-awesome-extension/)
+  --fontlogos, --fontlinux
+                        Add Font Logos Glyphs (https://github.com/Lukas-W/font-logos)
+  --octicons            Add Octicons Glyphs (https://octicons.github.com)
+  --codicons            Add Codicons Glyphs (https://github.com/microsoft/vscode-codicons)
+  --powersymbols        Add IEC Power Symbols (https://unicodepowersymbol.com/)
+  --pomicons            Add Pomicon Glyphs (https://github.com/gabrielelana/pomicons)
+  --powerline           Add Powerline Glyphs
+  --powerlineextra      Add Powerline Glyphs (https://github.com/ryanoasis/powerline-extra-symbols)
+  --material, --materialdesignicons, --mdi
+                        Add Material Design Icons (https://github.com/templarian/MaterialDesign)
+  --weather, --weathericons
+                        Add Weather Icons (https://github.com/erikflowers/weather-icons)
 ```
 #### Приклади
 
     ./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf
     ./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -s -q
-    ./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --use-single-width-glyphs --quiet
+    ./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --mono --quiet
     ./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -w
     ./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --windows --quiet
     ./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --windows --pomicons --quiet
@@ -391,11 +387,11 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 <a name="gotta-patch-em-all"></a>
 
-## Збираємося патчить їх всіх, Патчер Всіх Шрифтів!
+## Збираємося патчитити "їх усіх", Патчер Усіх Шрифтів!
 
 -   для використанням контриб'ютором або розробником
 
--   повторні патчі **всіх** шрифтшв в не патчаному каталозі:
+-   повторні патчі **всіх** шрифтів в не патченому каталозі:
 
 
     ./gotta-patch-em-all-font-patcher\!.sh
@@ -405,7 +401,7 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
     ./gotta-patch-em-all-font-patcher\!.sh Hermit
 
-## Контриб'юция
+## Контриб'юція
 
 Дивись [contributing.md](contributing.md)
 
@@ -459,7 +455,7 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 [octicons]: https://github.com/primer/octicons
 
-[font-linux]: https://github.com/Lukas-W/font-logos
+[font-logos]: https://github.com/Lukas-W/font-logos
 
 [gabrielelana-pomicons]: https://github.com/gabrielelana/pomicons
 
@@ -480,8 +476,6 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 [gitter]: https://gitter.im/ryanoasis/nerd-fonts
 
 [code-climate]: https://codeclimate.com/github/ryanoasis/nerd-fonts
-
-[travis-ci]: https://travis-ci.org/ryanoasis/nerd-fonts
 
 [twitter-intent]: https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fryanoasis%2Fnerd-fonts&via=%40nerdfonts&text=Nerd%20Fonts%20-%20Iconic%20font%20aggregator%2C%20collection%2C%20and%20patcher&hashtags=iconfont%20font%20github
 
@@ -509,8 +503,6 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 [img-code-climate-badge]: https://img.shields.io/codeclimate/issues/ryanoasis/nerd-fonts.svg?style=for-the-badge
 
-[img-travis-ci]: https://img.shields.io/travis/ryanoasis/nerd-fonts.svg?branch=master&style=for-the-badge
-
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=for-the-badge
 
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJzdmcyIiB3aWR0aD0iNjQ1IiBoZWlnaHQ9IjU4NSIgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyBpZD0ibGF5ZXIxIj4gIDxwYXRoIGlkPSJwYXRoMjQxNyIgZD0ibTI5Ny4zIDU1MC44N2MtMTMuNzc1LTE1LjQzNi00OC4xNzEtNDUuNTMtNzYuNDM1LTY2Ljg3NC04My43NDQtNjMuMjQyLTk1LjE0Mi03Mi4zOTQtMTI5LjE0LTEwMy43LTYyLjY4NS01Ny43Mi04OS4zMDYtMTE1LjcxLTg5LjIxNC0xOTQuMzQgMC4wNDQ1MTItMzguMzg0IDIuNjYwOC01My4xNzIgMTMuNDEtNzUuNzk3IDE4LjIzNy0zOC4zODYgNDUuMS02Ni45MDkgNzkuNDQ1LTg0LjM1NSAyNC4zMjUtMTIuMzU2IDM2LjMyMy0xNy44NDUgNzYuOTQ0LTE4LjA3IDQyLjQ5My0wLjIzNDgzIDUxLjQzOSA0LjcxOTcgNzYuNDM1IDE4LjQ1MiAzMC40MjUgMTYuNzE0IDYxLjc0IDUyLjQzNiA2OC4yMTMgNzcuODExbDMuOTk4MSAxNS42NzIgOS44NTk2LTIxLjU4NWM1NS43MTYtMTIxLjk3IDIzMy42LTEyMC4xNSAyOTUuNSAzLjAzMTYgMTkuNjM4IDM5LjA3NiAyMS43OTQgMTIyLjUxIDQuMzgwMSAxNjkuNTEtMjIuNzE1IDYxLjMwOS02NS4zOCAxMDguMDUtMTY0LjAxIDE3OS42OC02NC42ODEgNDYuOTc0LTEzNy44OCAxMTguMDUtMTQyLjk4IDEyOC4wMy01LjkxNTUgMTEuNTg4LTAuMjgyMTYgMS44MTU5LTI2LjQwOC0yNy40NjF6IiBmaWxsPSIjZGQ1MDRmIi8%2BIDwvZz48L3N2Zz4%3D
@@ -521,7 +513,7 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 [consolas]: https://www.microsoft.com/typography/fonts/family.aspx?FID=300
 
-[input-mono]: http://input.fontbureau.com/download/
+[input-mono]: http://input.djr.com/download/
 
 [pragmatapro]: https://www.fsd.it/shop/fonts/pragmatapro/
 
@@ -531,7 +523,7 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 [release]: https://github.com/ryanoasis/nerd-fonts/releases/latest "Latest Release (external link) ➶"
 
-[coc]: https://github.com/ryanoasis/nerd-fonts/blob/master/code_of_conduct.md "Contributor Covenant Code of Conduct"
+[coc]: https://github.com/ryanoasis/nerd-fonts/blob/-/code_of_conduct.md "Contributor Covenant Code of Conduct"
 
 [prs]: http://makeapullrequest.com "Make a Pull Request (external link) ➶"
 
@@ -591,8 +583,10 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 [f-ia-writer]: https://github.com/iaolo/iA-Fonts
 
+[f-departuremono]:https://github.com/rektdeckard/departure-mono
+
 <!--
-Пропатченні шріфти внутрішні посилання
+Внутрішні посилання на пропатченні шрифти 
 -->
 
 [p-3270]: patched-fonts/3270
@@ -610,6 +604,8 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 [p-blex]: patched-fonts/IBMPlexMono
 
 [p-cousine]: patched-fonts/Cousine
+
+[p-departuremono]:patched-fonts/DepartureMono
 
 [p-dejavu]: patched-fonts/DejaVuSansMono
 

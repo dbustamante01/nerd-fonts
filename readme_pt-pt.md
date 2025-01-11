@@ -10,7 +10,7 @@
 [Versões][release]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Tipos de Letra](#tipos-de-letra)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Modificador de Tipo de Letra](#font-patcher)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Documentação Wiki][wiki]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Autocolantes][stickers]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[VimDevIcons][vim-devicons]
 
 
-[![GitHub release][img-version-badge]][repo] [![Gitter][img-gitter-badge]][gitter] [![Build Status][img-travis-ci]][travis-ci] [![Code of Conduct][coc-badge]][coc] [![PRs Welcome][prs-badge]][prs]  <a href="#tipos-de-letra" title=""><img src="https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/images/faux-shield-badge-os-logos.svg?sanitize=true" alt="Nerd Fonts - OS Support"></a> [![Twitter][twitter-badge]][twitter-intent]
+[![GitHub release][img-version-badge]][repo] [![Gitter][img-gitter-badge]][gitter] [![Code of Conduct][coc-badge]][coc] [![PRs Welcome][prs-badge]][prs]  <a href="#tipos-de-letra" title=""><img src="https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/images/faux-shield-badge-os-logos.svg?sanitize=true" alt="Nerd Fonts - OS Support"></a> [![Twitter][twitter-badge]][twitter-intent]
 
 
 </div>
@@ -39,7 +39,7 @@ O diagram Sankey mostra os conjuntos de glifos incluídos abaixo:
   * [**4 - Tipos de letras do Homebrew (macOS (OS X))**](#opção-4-tipos-de-letra-do-homebrew)
   * [**5 - Dar clone ao repositório**](#opção-5-dar-clone-ao-repositório)
   * [**6 - Transferir *ad hoc* com `curl`**](#opção-6-transferir-ad-hoc-com-curl)
-  * [**7 - Repositório do Utilizador do Arch (AUR) não-oficial (Arch Linux)**](#opção-7-repositório-do-utilizador-do-arch-aur-não-oficial-arch-linux)
+  * [**7 - Repositório do Community do Arch (Arch Linux)**](#opção-7-repositório-arch-linux)
   * [**8 - Criar o teu tipo de letra**](#opção-8-criar-o-teu-tipo-de-letra)
 
 [**Características**](#características)
@@ -77,7 +77,7 @@ _Se tu..._
   * `Opção 4.` utilizas **macOS** e queres utilizar **Homebrew** vê: [Tipos de letras do Homebrew](#opção-4-tipos-de-letra-do-homebrew)
   * `Opção 5.` queres **controlo total**, então vê: [Dar clone ao repositório](#opção-5-dar-clone-ao-repositório)
   * `Opção 6.` queres utilizar o **comando `curl`** ou **executadores** vê: [Transferir *ad hoc* com `curl`](#opção-6-transferir-ad-hoc-com-curl)
-  * `Opção 7.` utilizas **Arch Linux** e queres utilizar o **AUR packages** vê: [Repositório do Utilizador do Arch (AUR) não-oficial](#opção-7-repositório-do-utilizador-do-arch-aur-não-oficial-arch-linux)
+  * `Opção 7.` utilizas **Arch Linux** e queres utilizar o **Community packages** vê: [Repositório do Utilizador do Community](#opção-7-repositório-arch-linux)
   * `Opção 8.` queres modificar o teu tipo de letra vê: [Modificador de tipo de letra](#opção-8-criar-o-teu-tipo-de-letra)
 
 ## Características
@@ -86,8 +86,8 @@ _Se tu..._
   * Para mais detalhes, vê a seção [**Modificador de tipo de letra**](#font-patcher)
 * Já existem **`50`** [tipos de letra modificados](#tipos-de-letra)
 * Mais de **`1,428,000`** combinações/variações únicas de tipos de letra modificados [(mais detalhes)](#combinações)
-* Cerca de **`2,600`** glifos/ícones combinados [(mais detalhes)](#combinações)
-  * Os atuais conjuntos de glifos incluem: [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome], [Material Design Icons][font-material-design-icons], [Weather][font-weather], [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-linux] (Antigamente [Font Linux][font-linux]), [Pomicons][gabrielelana-pomicons]
+* Cerca de **`9,000`** glifos/ícones combinados [(mais detalhes)](#combinações)
+  * Os atuais conjuntos de glifos incluem: [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome], [Material Design Icons][font-material-design-icons], [Weather][font-weather], [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-logos] (Antigamente Font Linux), [Pomicons][gabrielelana-pomicons]
 * Versões de glifos **monoespaçados (de largura fixa)** _ou_ glifos de **largura dupla (não monoespaçados)** para cada tipo de letra
   * Isto refere-se aos glifos do Nerd Font, não necessariamente ao tipo de letra
 * Um desenvolvedor/contribuidor criou um [executador em Unix Shell](#modifica-tudo) para modificar novamente todos os tipos de letra
@@ -108,7 +108,7 @@ See [Wiki: Nomes dos ícones em Unix Shell][wiki-icon-names-in-shell]
 | :------------------------------------------------ | :---------------------------------- | :---- | :--------- | :--------------- |
 | [3270 Nerd Font][p-3270]                          | [3270][f-3270]                      | NÃO   | 1000       | ![w] ![m2] ![l]  |
 | [Agave][p-agave]                                  | [Agave][f-agave]                    | NÃO   | 2048       | ![w] ![m2] ![l]  |
-| [Anonymice Nerd Font][p-anonymous-pro]            | [Anonymous Pro][f-a-pro]            | NÃO   | 2048       | ![w] ![m2] ![l]  |
+| [AnonymicePro Nerd Font][p-anonymous-pro]         | [Anonymous Pro][f-a-pro]            | NÃO   | 2048       | ![w] ![m2] ![l]  |
 | [Arimo][p-arimo]                                  | [Arimo][f-arimo]                    | NÃO   | 2048       | ![w] ![m2] ![l]  |
 | [Aurulent Sans Mono Nerd Font][p-aurulent]        |                                     | NÃO   | 1000       | ![w] ![m2] ![l]  |
 | [BigBlueTerminal][p-bigblueterm]                  |                                     | NÃO   | 1200       | ![w] ![m2] ![l]  |
@@ -118,6 +118,7 @@ See [Wiki: Nomes dos ícones em Unix Shell][wiki-icon-names-in-shell]
 | [Code New Roman Nerd Font][p-code-nr]             |                                     | NÃO   | 2048       | ![w] ![m2] ![l]  |
 | [Cousine Nerd Font][p-cousine]                    | [Cousine][f-cousine]                | NÃO   | 1000       | ![w] ![m2] ![l]  |
 | [DaddyTimeMono][p-daddytimemono]                  | [DaddyTimeMono][f-daddytimemono]    | NÃO   | 1024       | ![w] ![m2] ![l]  |
+| [DepartureMono Nerd Font][p-departuremono]        | [Departure Mono][f-departuremono]   | NÃO   | 550        | ![w] ![m2] ![l]  |
 | [DejaVu Sans Mono Nerd Font][p-dejavu]            |                                     | NÃO   | 2048       | ![w] ![m2] ![l]  |
 | [Droid Sans Mono Nerd Font][p-droid]              |                                     | NÃO   | 2048       | ![w] ![m2] ![l]  |
 | [Fantasque Sans Nerd Font][p-fantasque]           | [Fantasque Sans][f-fant]            | NÃO   | 2048       | ![w] ![m2] ![l]  |
@@ -162,12 +163,12 @@ See [Wiki: Nomes dos ícones em Unix Shell][wiki-icon-names-in-shell]
 
 ## Combinações
 
-- Há mais de **`1,428,000`** variações/combinações únicas (Power Set) de tipos de letra modificados:
+- Há mais de **`1,485,000`** variações/combinações únicas (Power Set) de tipos de letra modificados:
   - **`50`** tipos de letra modificado
-  - **`697`** famílias de tipo de letra modificadas
-  - **`2,788`** variações/combinações «completas»
-  - **`1,428,110`** variações/combinações _possíveis_
-  - **`1,430,898`** combinações totais calculadas (2,788 + 1,428,110)
+  - **`719`** famílias de tipo de letra modificadas
+  - **`2,876`** variações/combinações «completas»
+  - **`'1,485,410'`** variações/combinações _possíveis_
+  - - **`1,488,286`** combinações totais calculadas (2,876 + 1,428,110)
 - As combinações para cada tipo de letra são quaisquer combinações de [Variações](#variações)
 
 ### Variações
@@ -180,7 +181,7 @@ See [Wiki: Nomes dos ícones em Unix Shell][wiki-icon-names-in-shell]
 - [Material Design Icons][font-material-design-icons]
 - [Weather][font-weather]
 - [GitHub Octicons][octicons]
-- [Font Logos][font-linux] (Antigamente [Font Linux][font-linux])
+- [Font Logos][font-logos] (Antigamente Font Linux)
 - [Powerline Extra Symbols][ryanoasis-powerline-extra-symbols]
 - [IEC Power Symbols][website-iecpower]
 - [Pomicons][gabrielelana-pomicons]
@@ -230,11 +231,10 @@ _Nota_: Por agora, **implica dar clone** do repositório
 
 > Melhor opção caso utilizes **macOS** e queres utilizar **Homebrew**.
 
-Todos os tipos de letra estão disponíveis através de [Homebrew Cask Fonts](https://github.com/Homebrew/homebrew-cask-fonts) para macOS (OS X)
+Todos os tipos de letra estão disponíveis através de [Homebrew Cask](https://github.com/Homebrew/homebrew-cask) para macOS (OS X)
 
 ```sh
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+brew install font-hack-nerd-font
 ```
 
 ### `Opção 5: Dar clone ao repositório`
@@ -256,7 +256,7 @@ git clone --depth 1
 
 ```sh
 mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
 _Note:_ caminhos alternativos deprecados: `~/.fonts`
@@ -264,27 +264,13 @@ _Note:_ caminhos alternativos deprecados: `~/.fonts`
 #### macOS (OS X)
 
 ```sh
-cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
-### `Opção 7: Repositório do Utilizador do Arch (AUR) não-oficial (Arch Linux`
+### `Opção 7: Repositório Arch Linux`
 
-> E a opção para utilizadores de **Arch Linux** que querem utilizar os **pacotes do AUR**.
-
-Os seguintes tipos de letra estão disponíveis nos [pacotes do AUR](https://aur.archlinux.org/) para Arch Linux:
-
-* [Nerd Fonts Complete (largua fixa)](https://aur.archlinux.org/packages/nerd-fonts-complete/)
-* [Nerd Fonts Complete (largura simples) (desatualizado)](https://aur.archlinux.org/packages/nerd-fonts-complete-mono-glyphs/)
-* [Nerd Fonts DejaVu Complete](https://aur.archlinux.org/packages/nerd-fonts-dejavu-complete/)
-* [Nerd Fonts Source Code Pro Complete](https://aur.archlinux.org/packages/nerd-fonts-source-code-pro/)
-* [Nerd Fonts Git (desatualizado)](https://aur.archlinux.org/packages/nerd-fonts-git/)
-* [Nerd Fonts Fira Code](https://aur.archlinux.org/packages/nerd-fonts-fira-code/)
-* [Nerd Fonts Terminus](https://aur.archlinux.org/packages/nerd-fonts-terminus/)
-* [Nerd Fonts Liberation Mono](https://aur.archlinux.org/packages/nerd-fonts-liberation-mono/)
-* [Nerd Fonts Go Mono](https://aur.archlinux.org/packages/nerd-fonts-go-mono/)
-* [Nerd Fonts Anonymous Pro](https://aur.archlinux.org/packages/nerd-fonts-anonymous-pro/)
-* [Nerd Fonts Noto](https://aur.archlinux.org/packages/nerd-fonts-noto/)
-* [Nerd Fonts Inconsolata](https://aur.archlinux.org/packages/nerd-fonts-inconsolata/)
+Most fonts are available via [Arch Community packages](https://archlinux.org/packages/?sort=&repo=Community&q=-nerd).
+Some special packages are [in AUR](https://aur.archlinux.org/packages?K=nerd-fonts-&outdated=off).
 
 ### `Opção 8: Criar o teu tipo de letra`
 
@@ -303,7 +289,7 @@ Vê: [Modificador de tipo de letra](#font-patcher) para instruções de utiliza�
 </h2>
 
 Modificar o tipo de letra à tua escolha com [VimDevIcons ➶][vim-devicons]:
-* requer: Python 2 (ou Python 3), o pacote `python-fontforge` (versão `20141231` ou mais recente, vê
+* requer: Python 3, o pacote `python-fontforge` (versão `20141231` ou mais recente, vê
   as [instruções de instalação (em inglês)](http://designwithfontforge.com/en-US/Installing_Fontforge.html))
 * método alternativo para macOS: `brew install fontforge`
 * Utilização:
@@ -320,72 +306,82 @@ Modificar o tipo de letra à tua escolha com [VimDevIcons ➶][vim-devicons]:
 
 
 ```
-usage: font-patcher [-h] [-v] [-s] [-l] [-q] [-w] [-c] [--fontawesome]
-                    [--fontawesomeextension] [--fontlinux] [--octicons]
-                    [--powersymbols] [--pomicons] [--powerline]
-                    [--powerlineextra] [--material] [--weather]
-                    [--custom [CUSTOM]] [--postprocess [POSTPROCESS]]
-                    [--removeligs] [--configfile [CONFIGFILE]]
-                    [--progressbars | --no-progressbars] [--careful]
-                    [-ext [EXTENSION]] [-out [OUTPUTDIR]]
+Nerd Fonts Patcher v3.0.2 (4.4.0) (ff 20230101)
+usage: font-patcher [-h] [-v] [-s] [-l] [-q] [-c] [--careful] [--removeligs] [--postprocess [POSTPROCESS]] [--configfile [CONFIGFILE]] [--custom [CUSTOM]]
+                    [-ext [EXTENSION]] [-out [OUTPUTDIR]] [--glyphdir [GLYPHDIR]] [--makegroups [{-1,0,1,2,3,4,5,6}]] [--variable-width-glyphs]
+                    [--has-no-italic] [--progressbars | --no-progressbars] [--debug [{0,1,2,3}]] [--dry] [--xavgcharwidth [XAVGWIDTH]] [--fontawesome]
+                    [--fontawesomeextension] [--fontlogos] [--octicons] [--codicons] [--powersymbols] [--pomicons] [--powerline] [--powerlineextra]
+                    [--material] [--weather]
                     font
 
-Modificador de Fontes Nerd Fonts: modifica uma determinada fonte com glifos relacionados à programação e ao desenvolvimento
+Nerd Fonts Font Patcher: patches a given font with programming and development related glyphs
 
 * Website: https://www.nerdfonts.com
-* Versão: 2.0.0
-* Website do desenvolvimento: https://github.com/ryanoasis/nerd-fonts
-* Histórico de alterações: https://github.com/ryanoasis/nerd-fonts/blob/master/changelog.md
+* Version: 3.0.2
+* Development Website: https://github.com/ryanoasis/nerd-fonts
+* Changelog: https://github.com/ryanoasis/nerd-fonts/blob/-/changelog.md
 
-argumentos posicionais:
-  font                   Caminho para a fonte a ser modificada (por exemplo, Inconsolata.otf)
+positional arguments:
+  font                  The path to the font to patch (e.g., Inconsolata.otf)
 
-argumentos opcionais:
-  -h, --help            mostrar esta mensagem de ajuda e sair
-  -v, --version         mostrar o número da versão do programa e sair
-  -s, --mono, --use-single-width-glyphs
-                        Se os glifos devem ser gerados como largura simples e não largura dupla (o padrão é largura dupla)
+options:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -s, --mono            Whether to generate the glyphs as single-width not double-width (default is double-width)
   -l, --adjust-line-height
-                        Se a altura da linha deve ser ajustada (tentar centralizar os separadores de powerline mais uniformemente)
+                        Whether to adjust line heights (attempt to center powerline separators more evenly)
   -q, --quiet, --shutup
-                        Não gerar saída de detalhe
-  -w, --windows         Limitar o nome da fonte interna a 31 caracteres (para compatibilidade com o Windows)
-  -c, --complete        Aderir todos os glifos disponíveis
-  --fontawesome         Aderir os glifos do Font Awesome (http://fontawesome.io/)
-  --fontawesomeextension
-                        Aderir os glifos do Font Awesome Extension (https://andrelzgava.github.io/font-awesome-extension/)
-  --fontlinux, --fontlogos
-                        Aderir os glifos do Font Linux e doutros glifos de código-aberto (https://github.com/Lukas-W/font-logos)
-  --octicons            Aderir os glifos do Octicons (https://octicons.github.com)
-  --powersymbols        Aderir os glifos do IEC Power Symbols (https://unicodepowersymbol.com/)
-  --pomicons            Aderir os glifos do Pomicon (https://github.com/gabrielelana/pomicons)
-  --powerline           Aderir os glifos do Powerline
-  --powerlineextra      Aderir os glifos do Powerline (https://github.com/ryanoasis/powerline-extra-symbols)
-  --material, --materialdesignicons, --mdi
-                        Aderir os ícones do Material Design (https://github.com/templarian/MaterialDesign)
-  --weather, --weathericons
-                        Aderir os ícones do Weather (https://github.com/erikflowers/weather-icons)
-  --custom [CUSTOM]     Especificar um tipo de letra de símbolos personalizada. Todos os novos glifos serão copiados, sem escala aplicada.
-  --postprocess [POSTPROCESS]
-                        Especificar um executador para pós-processador
+                        Do not generate verbose output
+  -c, --complete        Add all available Glyphs
+  --careful             Do not overwrite existing glyphs if detected
   --removeligs, --removeligatures
-                        Remove as ligaduras especificadas no ficheiro de configuração JSON
+                        Removes ligatures specificed in JSON configuration file
+  --postprocess [POSTPROCESS]
+                        Specify a Script for Post Processing
   --configfile [CONFIGFILE]
-                        Especificar um caminho para o arquivo de configuração JSON (vê a amostra: src/config.sample.json)
-  --progressbars        Mostrar barras de progresso de conclusão percentual por Glyph Set
-  --no-progressbars     Não mostrar barras de progresso de conclusão percentual por Glyph Set
-  --careful             Não substituir os glifos existentes se detectados
+                        Specify a file path for JSON configuration file (see sample: src/config.sample.json)
+  --custom [CUSTOM]     Specify a custom symbol font, all glyphs will be copied; absolute path suggested
   -ext [EXTENSION], --extension [EXTENSION]
-                        Alterar o tipo de ficheiro de fonte para criar (por exemplo, ttf, otf)
+                        Change font file type to create (e.g., ttf, otf)
   -out [OUTPUTDIR], --outputdir [OUTPUTDIR]
-                        O diretório para enviar o ficheiro de tipo de letra modificado para
+                        The directory to output the patched font file to
+  --glyphdir [GLYPHDIR]
+                        Path to glyphs to be used for patching
+  --makegroups [{-1,0,1,2,3,4,5,6}]
+                        Use alternative method to name patched fonts (recommended)
+  --variable-width-glyphs
+                        Do not adjust advance width (no "overhang")
+  --has-no-italic       Font family does not have Italic (but Oblique)
+  --progressbars        Show percentage completion progress bars per Glyph Set (default)
+  --no-progressbars     Don't show percentage completion progress bars per Glyph Set
+  --debug [{0,1,2,3}]   Verbose mode (optional: 1=just to file; 2*=just to terminal; 3=display and file)
+  --dry                 Do neither patch nor store the font, to check naming
+  --xavgcharwidth [XAVGWIDTH]
+                        Adjust xAvgCharWidth (optional: concrete value)
+
+Symbol Fonts:
+  --fontawesome         Add Font Awesome Glyphs (http://fontawesome.io/)
+  --fontawesomeextension
+                        Add Font Awesome Extension Glyphs (https://andrelzgava.github.io/font-awesome-extension/)
+  --fontlogos, --fontlinux
+                        Add Font Logos Glyphs (https://github.com/Lukas-W/font-logos)
+  --octicons            Add Octicons Glyphs (https://octicons.github.com)
+  --codicons            Add Codicons Glyphs (https://github.com/microsoft/vscode-codicons)
+  --powersymbols        Add IEC Power Symbols (https://unicodepowersymbol.com/)
+  --pomicons            Add Pomicon Glyphs (https://github.com/gabrielelana/pomicons)
+  --powerline           Add Powerline Glyphs
+  --powerlineextra      Add Powerline Glyphs (https://github.com/ryanoasis/powerline-extra-symbols)
+  --material, --materialdesignicons, --mdi
+                        Add Material Design Icons (https://github.com/templarian/MaterialDesign)
+  --weather, --weathericons
+                        Add Weather Icons (https://github.com/erikflowers/weather-icons)
 ```
 
 #### Exemplos
 
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -s -q
-	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --use-single-width-glyphs --quiet
+	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --mono --quiet
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -w
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --windows --quiet
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --windows --pomicons --quiet
@@ -462,7 +458,7 @@ Referência do repositório
 [font-material-design-icons]:https://github.com/Templarian/MaterialDesign
 [font-weather]:https://github.com/erikflowers/weather-icons
 [octicons]:https://github.com/primer/octicons
-[font-linux]:https://github.com/Lukas-W/font-logos
+[font-logos]:https://github.com/Lukas-W/font-logos
 [gabrielelana-pomicons]:https://github.com/gabrielelana/pomicons
 [Seti-UI]:https://atom.io/themes/seti-ui
 [ryanoasis-powerline-extra-symbols]:https://github.com/ryanoasis/powerline-extra-symbols
@@ -473,7 +469,6 @@ Referência do repositório
 [repo]:https://github.com/ryanoasis/nerd-fonts
 [gitter]:https://gitter.im/ryanoasis/nerd-fonts
 [code-climate]:https://codeclimate.com/github/ryanoasis/nerd-fonts
-[travis-ci]:https://travis-ci.org/ryanoasis/nerd-fonts
 [twitter-intent]:https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fryanoasis%2Fnerd-fonts&via=%40nerdfonts&text=Nerd%20Fonts%20-%20Iconic%20font%20aggregator%2C%20collection%2C%20and%20patcher&hashtags=iconfont%20font%20github
 
 
@@ -495,7 +490,6 @@ Referências das ligações
 [img-version-badge]:https://img.shields.io/github/release/ryanoasis/nerd-fonts.svg?style=for-the-badge
 [img-gitter-badge]:https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=for-the-badge
 [img-code-climate-badge]:https://img.shields.io/codeclimate/issues/ryanoasis/nerd-fonts.svg?style=for-the-badge
-[img-travis-ci]:https://img.shields.io/travis/ryanoasis/nerd-fonts.svg?branch=master&style=for-the-badge
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=for-the-badge
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJzdmcyIiB3aWR0aD0iNjQ1IiBoZWlnaHQ9IjU4NSIgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyBpZD0ibGF5ZXIxIj4gIDxwYXRoIGlkPSJwYXRoMjQxNyIgZD0ibTI5Ny4zIDU1MC44N2MtMTMuNzc1LTE1LjQzNi00OC4xNzEtNDUuNTMtNzYuNDM1LTY2Ljg3NC04My43NDQtNjMuMjQyLTk1LjE0Mi03Mi4zOTQtMTI5LjE0LTEwMy43LTYyLjY4NS01Ny43Mi04OS4zMDYtMTE1LjcxLTg5LjIxNC0xOTQuMzQgMC4wNDQ1MTItMzguMzg0IDIuNjYwOC01My4xNzIgMTMuNDEtNzUuNzk3IDE4LjIzNy0zOC4zODYgNDUuMS02Ni45MDkgNzkuNDQ1LTg0LjM1NSAyNC4zMjUtMTIuMzU2IDM2LjMyMy0xNy44NDUgNzYuOTQ0LTE4LjA3IDQyLjQ5My0wLjIzNDgzIDUxLjQzOSA0LjcxOTcgNzYuNDM1IDE4LjQ1MiAzMC40MjUgMTYuNzE0IDYxLjc0IDUyLjQzNiA2OC4yMTMgNzcuODExbDMuOTk4MSAxNS42NzIgOS44NTk2LTIxLjU4NWM1NS43MTYtMTIxLjk3IDIzMy42LTEyMC4xNSAyOTUuNSAzLjAzMTYgMTkuNjM4IDM5LjA3NiAyMS43OTQgMTIyLjUxIDQuMzgwMSAxNjkuNTEtMjIuNzE1IDYxLjMwOS02NS4zOCAxMDguMDUtMTY0LjAxIDE3OS42OC02NC42ODEgNDYuOTc0LTEzNy44OCAxMTguMDUtMTQyLjk4IDEyOC4wMy01LjkxNTUgMTEuNTg4LTAuMjgyMTYgMS44MTU5LTI2LjQwOC0yNy40NjF6IiBmaWxsPSIjZGQ1MDRmIi8%2BIDwvZz48L3N2Zz4%3D
 [twitter-badge]:https://img.shields.io/twitter/url/http/shields.io.svg?style=for-the-badge&logo=twitter
@@ -503,13 +497,13 @@ Referências das ligações
 
 
 [consolas]:https://www.microsoft.com/typography/fonts/family.aspx?FID=300
-[input-mono]:http://input.fontbureau.com/download/
+[input-mono]:http://input.djr.com/download/
 [pragmatapro]:https://www.fsd.it/shop/fonts/pragmatapro/
 [operator]:https://www.typography.com/fonts/operator/
 [dank]:https://dank.sh/
 
 [release]:https://github.com/ryanoasis/nerd-fonts/releases/latest "Latest Release (external link) ➶"
-[coc]:https://github.com/ryanoasis/nerd-fonts/blob/master/code_of_conduct.md "Contributor Covenant Code of Conduct"
+[coc]:https://github.com/ryanoasis/nerd-fonts/blob/-/code_of_conduct.md "Contributor Covenant Code of Conduct"
 [prs]:http://makeapullrequest.com "Make a Pull Request (external link) ➶"
 
 <!--
@@ -543,6 +537,7 @@ Repositórios dos tipos de letra
 [f-daddytimemono]:https://github.com/BourgeoisBear/DaddyTimeMono
 [f-agave]:https://github.com/agarick/agave
 [f-ia-writer]:https://github.com/iaolo/iA-Fonts
+[f-departuremono]:https://github.com/rektdeckard/departure-mono
 
 <!--
 LIgações internas do «Patched Font»
@@ -557,6 +552,7 @@ LIgações internas do «Patched Font»
 [p-blex]:patched-fonts/IBMPlexMono
 [p-cascadia]:patched-fonts/CascadiaCode
 [p-cousine]:patched-fonts/Cousine
+[p-departuremono]:patched-fonts/DepartureMono
 [p-dejavu]:patched-fonts/DejaVuSansMono
 [p-droid]:patched-fonts/DroidSansMono
 [p-fantasque]:patched-fonts/FantasqueSansMono

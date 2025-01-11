@@ -10,7 +10,7 @@
 [リリース][release]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[フォント](#パッチ済みフォント)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[パッチスクリプト](#font-patcher)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Wiki ドキュメント][wiki]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[ステッカー][stickers]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[VimDevIcons][vim-devicons]
 
 
-[![GitHub release][img-version-badge]][repo] [![Gitter][img-gitter-badge]][gitter] [![Build Status][img-travis-ci]][travis-ci] [![Code of Conduct][coc-badge]][coc] [![PRs Welcome][prs-badge]][prs]  <a href="#patched-fonts" title=""><img src="https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/images/faux-shield-badge-os-logos.svg?sanitize=true" alt="Nerd Fonts - OS Support"></a> [![Twitter][twitter-badge]][twitter-intent]
+[![GitHub release][img-version-badge]][repo] [![Gitter][img-gitter-badge]][gitter] [![Code of Conduct][coc-badge]][coc] [![PRs Welcome][prs-badge]][prs]  <a href="#patched-fonts" title=""><img src="https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/images/faux-shield-badge-os-logos.svg?sanitize=true" alt="Nerd Fonts - OS Support"></a> [![Twitter][twitter-badge]][twitter-intent]
 
 
 </div>
@@ -42,7 +42,7 @@
   * [**4 - Homebrew Fonts (macOS (OS X) 用)**](#その-4-homebrew-fonts)
   * [**5 - リポジトリのクローン**](#その-5-リポジトリをクローンする)
   * [**6 - Curl で直接ダウンロード**](#その-6-curl-で直接ダウンロード)
-  * [**7 - Arch User Repository (AUR) (Arch Linux用)**](#その-7-非公式-arch-user-repository-aur)
+  * [**7 - Arch Community Repository (Arch Linux用)**](#その-7-非公式-arch-community-repository)
   * [**8 - 自分でパッチを当てる**](#その-8-自分でフォントにパッチを当てる)
 
 [**特徴**](#特徴)
@@ -78,7 +78,7 @@ _あなたがもし……_
   * `その 4` **macOS** 利用者で **Homebrew** を使いたい方なら、[Homebrew Fonts](#その-4-homebrew-fonts)を見てください。
   * `その 5` **あなたの手で全てを管理したいのなら**、[リポジトリのクローン](#その-5-リポジトリをクローンする)を見てください。
   * `その 6` **`curl` コマンド**を使いたい、あるいは、**スクリプト**内で利用したい場合は [Curl で直接ダウンロード](#その-6-curl-で直接ダウンロード)を見てください。
-  * `その 7` **Arch Linux** 利用者で、**AUR packages** を使いたいならば、[非公式 Arch User Repository](#その-7-非公式-arch-user-repository-aur)を見てください。
+  * `その 7` **Arch Linux** 利用者で、**Community packages** を使いたいならば、[非公式 Arch Community Repository](#その-7-非公式-arch-community-repository)を見てください。
   * `その 8` 自分でフォントにパッチを当てたいのなら、[パッチスクリプト](#その-8-自分でフォントにパッチを当てる)を見てください。
 
 ## 特徴
@@ -87,8 +87,8 @@ _あなたがもし……_
   * さらに詳しくは[**パッチスクリプト**](#font-patcher)の節を見てください。
 * **`50`** を数える[パッチ済みフォントファミリー](#パッチ済みフォント)。
 * **`1,571,470`** を超える、パッチ済みフォントの変種とその組み合わせ[（詳細はこちら）](#組み合わせ)。
-* **`2,600`** を超えるグリフ（アイコン）を合成しています。
-  * 現在含まれるグリフセットはこちら: [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome], [Material Design Icons][font-material-design-icons], [Weather][font-weather], [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-linux] (以前[Font Linux][font-linux]と呼ばれていたものです), [Pomicons][gabrielelana-pomicons]
+* **`9,000`** を超えるグリフ（アイコン）を合成しています。
+  * 現在含まれるグリフセットはこちら: [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome], [Material Design Icons][font-material-design-icons], [Weather][font-weather], [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-logos] (以前Font Linuxと呼ばれていたものです), [Pomicons][gabrielelana-pomicons]
 * それぞれのフォントは**半角 (固定ピッチ、固定幅)**、_あるいは_、**全角**グリフを含みます。
   * これは必ずしもフォント全体についてではなく、Nerd Font 由来のグリフについて言っています。
 * 開発者、あるいは、開発に貢献したい人は、付属の [bash スクリプト](#gotta-patch-em-all)を使って全てのフォントにパッチを再び当てることができます。
@@ -110,7 +110,7 @@ _あなたがもし……_
 |:--------------------------------------------------|:-----------------------------------|:------|:----------|:-----------------|
 | [3270 Nerd Font][p-3270]                          | [3270][f-3270]                     | NO    | 1000      | ![w] ![m2] ![l]  |
 | [Agave][p-agave]                                  | [Agave][f-agave]                   | NO    | 2048      | ![w] ![m2] ![l]  |
-| [Anonymice Nerd Font][p-anonymous-pro]            | [Anonymous Pro][f-a-pro]           | NO    | 2048      | ![w] ![m2] ![l]  |
+| [AnonymicePro Nerd Font][p-anonymous-pro]          | [Anonymous Pro][f-a-pro]           | NO    | 2048      | ![w] ![m2] ![l]  |
 | [Arimo][p-arimo]                                  | [Arimo][f-arimo]                   | NO    | 2048      | ![w] ![m2] ![l]  |
 | [Aurulent Sans Mono Nerd Font][p-aurulent]        |                                    | NO    | 1000      | ![w] ![m2] ![l]  |
 | [BigBlueTerminal][p-bigblueterm]                  |                                    | NO    | 1200      | ![w] ![m2] ![l]  |
@@ -119,6 +119,7 @@ _あなたがもし……_
 | [Code New Roman Nerd Font][p-code-nr]             |                                    | NO    | 2048      | ![w] ![m2] ![l]  |
 | [Cousine Nerd Font][p-cousine]                    | [Cousine][f-cousine]               | NO    | 1000      | ![w] ![m2] ![l]  |
 | [DaddyTimeMono][p-daddytimemono]                  | [DaddyTimeMono][f-daddytimemono]   | NO    | 1024      | ![w] ![m2] ![l]  |
+| [DepartureMono Nerd Font][p-departuremono]        | [Departure Mono][f-departuremono]  | NO    | 550       | ![w] ![m2] ![l]  |
 | [DejaVu Sans Mono Nerd Font][p-dejavu]            |                                    | NO    | 2048      | ![w] ![m2] ![l]  |
 | [Droid Sans Mono Nerd Font][p-droid]              |                                    | NO    | 2048      | ![w] ![m2] ![l]  |
 | [Fantasque Sans Nerd Font][p-fantasque]           | [Fantasque Sans][f-fant]           | NO    | 2048      | ![w] ![m2] ![l]  |
@@ -163,12 +164,12 @@ _あなたがもし……_
 
 ## 組み合わせ
 
-- **`1,571,470`** を超える、パッチ済みフォントの変種とその組み合わせ (冪集合)。
+- **`1,485,000`** を超える、パッチ済みフォントの変種とその組み合わせ (冪集合)。
   - **`50`** のパッチ済みフォント書体。
-  - **`697`** のパッチ済みフォントファミリー。
-  - **`2,788`** の「完全な」変種とその組み合わせ。
-  - **`1,571,470`** の _理論上可能な_ 変種とその組み合わせ。
-  - 合計 **`1,574,258`** になる組み合わせ (2,788 + 1,571,470)。
+  - **`719`** のパッチ済みフォントファミリー。
+  - **`2,876`** の「完全な」変種とその組み合わせ。
+  - **`'1,485,410'`** の _理論上可能な_ 変種とその組み合わせ。
+  - 合計 **`1,488,286`** になる組み合わせ (2,876 + 1,428,110)。
 - 各々のフォントの「組み合わせ」はそれぞれの[変種](#変種)の組み合わせを表しています。
 
 ### 変種
@@ -180,7 +181,7 @@ _あなたがもし……_
 - [Material Design Icons][font-material-design-icons]
 - [Weather][font-weather]
 - [GitHub Octicons][octicons]
-- [Font Logos][font-linux] (以前[Font Linux][font-linux]と呼ばれていたものです。)
+- [Font Logos][font-logos] (以前Font Linuxと呼ばれていたものです。)
 - [Powerline Extra Symbols][ryanoasis-powerline-extra-symbols]
 - [IEC Power Symbols][website-iecpower]
 - [Pomicons][gabrielelana-pomicons]
@@ -230,11 +231,10 @@ _注意_: 今の所、リポジトリの**クローンが必要です。**
 
 > **macOS** で、かつ、**Homebrew** を使いたい場合に一番適した選択肢です。
 
-macOS (OS X) では [Homebrew Cask Fonts](https://github.com/Homebrew/homebrew-cask-fonts) を通じて全てのフォントが利用できます。
+macOS (OS X) では [Homebrew Cask](https://github.com/Homebrew/homebrew-cask) を通じて全てのフォントが利用できます。
 
 ```sh
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+brew install font-hack-nerd-font
 ```
 
 ### `その 5: リポジトリをクローンする`
@@ -256,7 +256,7 @@ git clone --depth 1
 
 ```sh
 mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
 _注意_: 以前別の選択肢として利用できたパス (`~/.fonts`) は deprecated になりました。
@@ -264,27 +264,13 @@ _注意_: 以前別の選択肢として利用できたパス (`~/.fonts`) は d
 #### macOS (OS X)
 
 ```sh
-cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
-### `その 7: 非公式 Arch User Repository (AUR)`
+### `その 7: 非公式 Arch Community Repository`
 
-> **Arch Linux**、かつ、 **AUR packages** を使いたい場合の選択肢です。
-
-Arch Linux 上の [AUR packages](https://aur.archlinux.org/) で以下のフォントが利用できます。
-
-* [Nerd Fonts Complete (double-width)](https://aur.archlinux.org/packages/nerd-fonts-complete/)
-* [Nerd Fonts Complete (single-width)](https://aur.archlinux.org/packages/nerd-fonts-complete-mono-glyphs/)
-* [Nerd Fonts DejaVu Complete](https://aur.archlinux.org/packages/nerd-fonts-dejavu-complete/)
-* [Nerd Fonts Source Code Pro Complete](https://aur.archlinux.org/packages/nerd-fonts-source-code-pro/)
-* [Nerd Fonts Git (out of date)](https://aur.archlinux.org/packages/nerd-fonts-git/)
-* [Nerd Fonts Fira Code](https://aur.archlinux.org/packages/nerd-fonts-fira-code/)
-* [Nerd Fonts Terminus](https://aur.archlinux.org/packages/nerd-fonts-terminus/)
-* [Nerd Fonts Liberation Mono](https://aur.archlinux.org/packages/nerd-fonts-liberation-mono/)
-* [Nerd Fonts Go Mono](https://aur.archlinux.org/packages/nerd-fonts-go-mono/)
-* [Nerd Fonts Anonymous Pro](https://aur.archlinux.org/packages/nerd-fonts-anonymous-pro/)
-* [Nerd Fonts Noto](https://aur.archlinux.org/packages/nerd-fonts-noto/)
-* [Nerd Fonts Inconsolata](https://aur.archlinux.org/packages/nerd-fonts-inconsolata/)
+Most fonts are available via [Arch Community packages](https://archlinux.org/packages/?sort=&repo=Community&q=-nerd).
+Some special packages are [in AUR](https://aur.archlinux.org/packages?K=nerd-fonts-&outdated=off).
 
 ### `その 8: 自分でフォントにパッチを当てる`
 
@@ -319,72 +305,82 @@ Arch Linux 上の [AUR packages](https://aur.archlinux.org/) で以下のフォ�
 
 
 ```
-usage: font-patcher [-h] [-v] [-s] [-l] [-q] [-w] [-c] [--fontawesome]
-                    [--fontawesomeextension] [--fontlinux] [--octicons]
-                    [--powersymbols] [--pomicons] [--powerline]
-                    [--powerlineextra] [--material] [--weather]
-                    [--custom [CUSTOM]] [--postprocess [POSTPROCESS]]
-                    [--removeligs] [--configfile [CONFIGFILE]]
-                    [--progressbars | --no-progressbars] [--careful]
-                    [-ext [EXTENSION]] [-out [OUTPUTDIR]]
+Nerd Fonts Patcher v3.0.2 (4.4.0) (ff 20230101)
+usage: font-patcher [-h] [-v] [-s] [-l] [-q] [-c] [--careful] [--removeligs] [--postprocess [POSTPROCESS]] [--configfile [CONFIGFILE]] [--custom [CUSTOM]]
+                    [-ext [EXTENSION]] [-out [OUTPUTDIR]] [--glyphdir [GLYPHDIR]] [--makegroups [{-1,0,1,2,3,4,5,6}]] [--variable-width-glyphs]
+                    [--has-no-italic] [--progressbars | --no-progressbars] [--debug [{0,1,2,3}]] [--dry] [--xavgcharwidth [XAVGWIDTH]] [--fontawesome]
+                    [--fontawesomeextension] [--fontlogos] [--octicons] [--codicons] [--powersymbols] [--pomicons] [--powerline] [--powerlineextra]
+                    [--material] [--weather]
                     font
 
 Nerd Fonts Font Patcher: patches a given font with programming and development related glyphs
 
 * Website: https://www.nerdfonts.com
-* Version: 2.0.0
+* Version: 3.0.2
 * Development Website: https://github.com/ryanoasis/nerd-fonts
-* Changelog: https://github.com/ryanoasis/nerd-fonts/blob/master/changelog.md
+* Changelog: https://github.com/ryanoasis/nerd-fonts/blob/-/changelog.md
 
 positional arguments:
-  font                  パッチを当てるフォントのパス。(例: Inconsolata.otf)
+  font                  The path to the font to patch (e.g., Inconsolata.otf)
 
-optional arguments:
-  -h, --help            このヘルプメッセージを表示して終了します。
-  -v, --version         プログラムのバージョン番号を表示して終了します。
-  -s, --mono, --use-single-width-glyphs
-                        全角ではなく、半角のグリフを生成するかどうか指定します（デフォルトでは全角です）。
+options:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -s, --mono            Whether to generate the glyphs as single-width not double-width (default is double-width)
   -l, --adjust-line-height
-                        行高を合わせるかどうか指定します (Powerline セパレータがちょうど真ん中になるようにします）。
+                        Whether to adjust line heights (attempt to center powerline separators more evenly)
   -q, --quiet, --shutup
-                        デバッグメッセージを表示しません。
-  -w, --windows         内部で利用するフォント名を 31 文字に制限します (Windows の互換性のためのオプションです)。
-  -c, --complete        全ての利用可能なグリフを追加します。
-  --fontawesome         Font Awesome のグリフを追加します (http://fontawesome.io/)。
-  --fontawesomeextension
-                        Font Awesome Extension のグリフを追加します (https://andrelzgava.github.io/font-awesome-extension/)。
-  --fontlinux, --fontlogos
-                        Font Linux とその他のオープンソースのグリフを追加します (https://github.com/Lukas-W/font-logos)。
-  --octicons            Octicons Glyphs のグリフを追加します (https://octicons.github.com)。
-  --powersymbols        IEC Power Symbols のグリフを追加します (https://unicodepowersymbol.com/)。
-  --pomicons            Pomicon のグリフを追加します (https://github.com/gabrielelana/pomicons)。
-  --powerline           Powerline グリフを追加します。
-  --powerlineextra      Powerline Extra のグリフを追加します (https://github.com/ryanoasis/powerline-extra-symbols)。
-  --material, --materialdesignicons, --mdi
-                        Material Design Icons のグリフを追加します (https://github.com/templarian/MaterialDesign)。
-  --weather, --weathericons
-                        Weather Icons のグリフを追加します (https://github.com/erikflowers/weather-icons)。
-  --custom [CUSTOM]     カスタムのシンボルフォントを指定します。全てのグリフがコピーされますが、大きさは変更されません。
-  --postprocess [POSTPROCESS]
-                        あと処理を行うためのスクリプトを指定します。
+                        Do not generate verbose output
+  -c, --complete        Add all available Glyphs
+  --careful             Do not overwrite existing glyphs if detected
   --removeligs, --removeligatures
-                        設定ファイルの JSON で指定されたリガチャを除きます。
+                        Removes ligatures specificed in JSON configuration file
+  --postprocess [POSTPROCESS]
+                        Specify a Script for Post Processing
   --configfile [CONFIGFILE]
-                        設定ファイルの JSON を指定します (src/config.sample.json の例を見てください)。
-  --progressbars        グリフセットごとに進捗を百分率で表示します。
-  --no-progressbars     グリフセットごとの進捗を表示しません。
-  --careful             既に存在するグリフがあれば、それを上書きしないようにします。
+                        Specify a file path for JSON configuration file (see sample: src/config.sample.json)
+  --custom [CUSTOM]     Specify a custom symbol font, all glyphs will be copied; absolute path suggested
   -ext [EXTENSION], --extension [EXTENSION]
-                        作成するフォントのファイルタイプを変更します (例: ttf, otf)。
+                        Change font file type to create (e.g., ttf, otf)
   -out [OUTPUTDIR], --outputdir [OUTPUTDIR]
-                        パッチを当てたファイルを保存するディレクトリ。
+                        The directory to output the patched font file to
+  --glyphdir [GLYPHDIR]
+                        Path to glyphs to be used for patching
+  --makegroups [{-1,0,1,2,3,4,5,6}]
+                        Use alternative method to name patched fonts (recommended)
+  --variable-width-glyphs
+                        Do not adjust advance width (no "overhang")
+  --has-no-italic       Font family does not have Italic (but Oblique)
+  --progressbars        Show percentage completion progress bars per Glyph Set (default)
+  --no-progressbars     Don't show percentage completion progress bars per Glyph Set
+  --debug [{0,1,2,3}]   Verbose mode (optional: 1=just to file; 2*=just to terminal; 3=display and file)
+  --dry                 Do neither patch nor store the font, to check naming
+  --xavgcharwidth [XAVGWIDTH]
+                        Adjust xAvgCharWidth (optional: concrete value)
+
+Symbol Fonts:
+  --fontawesome         Add Font Awesome Glyphs (http://fontawesome.io/)
+  --fontawesomeextension
+                        Add Font Awesome Extension Glyphs (https://andrelzgava.github.io/font-awesome-extension/)
+  --fontlogos, --fontlinux
+                        Add Font Logos Glyphs (https://github.com/Lukas-W/font-logos)
+  --octicons            Add Octicons Glyphs (https://octicons.github.com)
+  --codicons            Add Codicons Glyphs (https://github.com/microsoft/vscode-codicons)
+  --powersymbols        Add IEC Power Symbols (https://unicodepowersymbol.com/)
+  --pomicons            Add Pomicon Glyphs (https://github.com/gabrielelana/pomicons)
+  --powerline           Add Powerline Glyphs
+  --powerlineextra      Add Powerline Glyphs (https://github.com/ryanoasis/powerline-extra-symbols)
+  --material, --materialdesignicons, --mdi
+                        Add Material Design Icons (https://github.com/templarian/MaterialDesign)
+  --weather, --weathericons
+                        Add Weather Icons (https://github.com/erikflowers/weather-icons)
 ```
 
 #### Examples
 
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -s -q
-	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --use-single-width-glyphs --quiet
+	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --mono --quiet
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -w
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --windows --quiet
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --windows --pomicons --quiet
@@ -460,7 +456,7 @@ Repo References
 [font-material-design-icons]:https://github.com/Templarian/MaterialDesign
 [font-weather]:https://github.com/erikflowers/weather-icons
 [octicons]:https://github.com/primer/octicons
-[font-linux]:https://github.com/Lukas-W/font-logos
+[font-logos]:https://github.com/Lukas-W/font-logos
 [gabrielelana-pomicons]:https://github.com/gabrielelana/pomicons
 [Seti-UI]:https://atom.io/themes/seti-ui
 [ryanoasis-powerline-extra-symbols]:https://github.com/ryanoasis/powerline-extra-symbols
@@ -471,7 +467,6 @@ Repo References
 [repo]:https://github.com/ryanoasis/nerd-fonts
 [gitter]:https://gitter.im/ryanoasis/nerd-fonts
 [code-climate]:https://codeclimate.com/github/ryanoasis/nerd-fonts
-[travis-ci]:https://travis-ci.org/ryanoasis/nerd-fonts
 [twitter-intent]:https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fryanoasis%2Fnerd-fonts&via=%40nerdfonts&text=Nerd%20Fonts%20-%20Iconic%20font%20aggregator%2C%20collection%2C%20and%20patcher&hashtags=iconfont%20font%20github
 
 
@@ -493,7 +488,6 @@ Link References
 [img-version-badge]:https://img.shields.io/github/release/ryanoasis/nerd-fonts.svg?style=for-the-badge
 [img-gitter-badge]:https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=for-the-badge
 [img-code-climate-badge]:https://img.shields.io/codeclimate/issues/ryanoasis/nerd-fonts.svg?style=for-the-badge
-[img-travis-ci]:https://img.shields.io/travis/ryanoasis/nerd-fonts.svg?branch=master&style=for-the-badge
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=for-the-badge
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJzdmcyIiB3aWR0aD0iNjQ1IiBoZWlnaHQ9IjU4NSIgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyBpZD0ibGF5ZXIxIj4gIDxwYXRoIGlkPSJwYXRoMjQxNyIgZD0ibTI5Ny4zIDU1MC44N2MtMTMuNzc1LTE1LjQzNi00OC4xNzEtNDUuNTMtNzYuNDM1LTY2Ljg3NC04My43NDQtNjMuMjQyLTk1LjE0Mi03Mi4zOTQtMTI5LjE0LTEwMy43LTYyLjY4NS01Ny43Mi04OS4zMDYtMTE1LjcxLTg5LjIxNC0xOTQuMzQgMC4wNDQ1MTItMzguMzg0IDIuNjYwOC01My4xNzIgMTMuNDEtNzUuNzk3IDE4LjIzNy0zOC4zODYgNDUuMS02Ni45MDkgNzkuNDQ1LTg0LjM1NSAyNC4zMjUtMTIuMzU2IDM2LjMyMy0xNy44NDUgNzYuOTQ0LTE4LjA3IDQyLjQ5My0wLjIzNDgzIDUxLjQzOSA0LjcxOTcgNzYuNDM1IDE4LjQ1MiAzMC40MjUgMTYuNzE0IDYxLjc0IDUyLjQzNiA2OC4yMTMgNzcuODExbDMuOTk4MSAxNS42NzIgOS44NTk2LTIxLjU4NWM1NS43MTYtMTIxLjk3IDIzMy42LTEyMC4xNSAyOTUuNSAzLjAzMTYgMTkuNjM4IDM5LjA3NiAyMS43OTQgMTIyLjUxIDQuMzgwMSAxNjkuNTEtMjIuNzE1IDYxLjMwOS02NS4zOCAxMDguMDUtMTY0LjAxIDE3OS42OC02NC42ODEgNDYuOTc0LTEzNy44OCAxMTguMDUtMTQyLjk4IDEyOC4wMy01LjkxNTUgMTEuNTg4LTAuMjgyMTYgMS44MTU5LTI2LjQwOC0yNy40NjF6IiBmaWxsPSIjZGQ1MDRmIi8%2BIDwvZz48L3N2Zz4%3D
 [twitter-badge]:https://img.shields.io/twitter/url/http/shields.io.svg?style=for-the-badge&logo=twitter
@@ -501,13 +495,13 @@ Link References
 
 
 [consolas]:https://www.microsoft.com/typography/fonts/family.aspx?FID=300
-[input-mono]:http://input.fontbureau.com/download/
+[input-mono]:http://input.djr.com/download/
 [pragmatapro]:https://www.fsd.it/shop/fonts/pragmatapro/
 [operator]:https://www.typography.com/fonts/operator/
 [dank]:https://dank.sh/
 
 [release]:https://github.com/ryanoasis/nerd-fonts/releases/latest "Latest Release (external link) ➶"
-[coc]:https://github.com/ryanoasis/nerd-fonts/blob/master/code_of_conduct.md "Contributor Covenant Code of Conduct"
+[coc]:https://github.com/ryanoasis/nerd-fonts/blob/-/code_of_conduct.md "Contributor Covenant Code of Conduct"
 [prs]:http://makeapullrequest.com "Make a Pull Request (external link) ➶"
 
 <!--
@@ -540,6 +534,7 @@ Font repos
 [f-daddytimemono]:https://github.com/BourgeoisBear/DaddyTimeMono
 [f-agave]:https://github.com/agarick/agave
 [f-ia-writer]:https://github.com/iaolo/iA-Fonts
+[f-departuremono]:https://github.com/rektdeckard/departure-mono
 
 <!--
 Patched Font internal links
@@ -553,6 +548,7 @@ Patched Font internal links
 [p-bitstream]:patched-fonts/BitstreamVeraSansMono
 [p-blex]:patched-fonts/IBMPlexMono
 [p-cousine]:patched-fonts/Cousine
+[p-departuremono]:patched-fonts/DepartureMono
 [p-dejavu]:patched-fonts/DejaVuSansMono
 [p-droid]:patched-fonts/DroidSansMono
 [p-fantasque]:patched-fonts/FantasqueSansMono

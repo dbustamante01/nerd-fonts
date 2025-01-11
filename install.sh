@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 # Install Nerd Fonts
-__ScriptVersion="0.3"
+__ScriptVersion="0.8"
 
 # Default values for option variables:
 quiet=false
 mode="copy"
 clean=false
+dry=false
 extension="otf"
-patches=("Complete")
-compat=()
+variant="R"
 installpath="user"
 
 # Usage info
 usage() {
   cat << EOF
-Usage: ./install.sh [-q -v -h] [[--copy | --link] --clean | --list]
-                    [--use-single-width-glyphs] [--windows] [--otf | --ttf]
+Usage: ./install.sh [-q -v -h] [[--copy | --link] --clean | --list | --remove]
+                    [--mono] [--windows] [--otf | --ttf]
                     [--install-to-user-path | --install-to-system-path ]
-                    [--complete | --minimal | <patches>] [FONT...]
+                    [FONT...]
 
 General options:
 
@@ -32,8 +32,12 @@ General options:
   -C, --clean                   Recreate the root Nerd Fonts target directory
                                 (clean out all previous copies or symlinks).
 
-  -s, --use-single-width-glyphs Install single-width glyphs variants.
-  -w, --windows                 Install with limited internal font names.
+  --remove                      Remove all Nerd Fonts (that have been installed
+                                with this script).
+                                Can be combined with -L for a dry run.
+
+  -s, --mono                    Install single-width glyphs variants.
+  -p, --use-proportional-glyphs Install proportional glyphs variants.
 
   -U, --install-to-user-path    Install fonts to users home font path [default].
   -S, --install-to-system-path  Install fonts to global system path for all users, requires root.
@@ -41,18 +45,7 @@ General options:
   -O, --otf                     Prefer OTF font files [default].
   -T, --ttf                     Prefer TTF font files.
 
-Variation to install:
-
-  -A, --complete                Variants with patches applied [default].
-  -M, --minimal                 Variants with minimal patches applied.
-
-If you need more control over the included glyphs than when using the above
-two options, use any combination of these <patches>:
-
-  --fontawesome                 Include Font Awesome.
-  --fontlinux                   Include Font Linux.
-  --octicons                    Include Octicons.
-  --pomicons                    Include Pomicons.
+                                (*) Feature will not work anymore
 EOF
 }
 
@@ -62,7 +55,7 @@ version() {
 }
 
 # Parse options
-optspec=":qvhclLCsSUwOTAM-:"
+optspec=":qvhclLCspOTSU-:"
 while getopts "$optspec" optchar; do
   case "${optchar}" in
 
@@ -72,14 +65,13 @@ while getopts "$optspec" optchar; do
     h) usage; exit 0;;
     c) mode="copy";;
     l) mode="link";;
-    L) mode="list";;
+    L) dry=true
+       [ "$mode" != "remove" ] && mode="list";;
     C) clean=true;;
-    s) compat=( "${compat[@]}" "Nerd Font*Mono" );;
-    w) compat=( "${compat[@]}" "Windows Compatible" );;
+    s) variant="M";;
+    p) variant="P";;
     O) extension="otf";;
     T) extension="ttf";;
-    A) patches=("Complete");;
-    M) patches=();;
     S) installpath="system";;
     U) installpath="user";;
 
@@ -91,36 +83,21 @@ while getopts "$optspec" optchar; do
         help) usage; exit 0;;
         copy) mode="copy";;
         link) mode="link";;
-        list) mode="list";;
+        list) dry=true
+              [ "$mode" != "remove" ] && mode="list";;
+        remove) mode="remove";;
         clean) clean=true;;
-        use-single-width-glyphs) compat=( "${compat[@]}" "Nerd Font*Mono" );;
-        windows) compat=( "${compat[@]}" "Windows Compatible" );;
+        mono) variant="M";;
+        use-proportional-glyphs) variant="P";;
         otf) extension="otf";;
         ttf) extension="ttf";;
-        complete) patches=("Complete");;
-        minimal) patches=();;
         install-to-system-path) installpath="system";;
         install-to-user-path) installpath="user";;
         *)
-          case "${OPTARG}" in
-            # Long options that define variations
-            fontawesome | fontlinux | octicons | pomicons)
-              # If the user has picked one of these options,
-              # we need to unset `Complete`
-              delete=("Complete")
-              patches=( "${patches[@]/${delete[0]}}" )
-              case "${OPTARG}" in
-                fontawesome) patches=( "${patches[@]}" "Font Awesome" );;
-                fontlinux) patches=( "${patches[@]}" "Font Linux" );;
-                octicons) patches=( "${patches[@]}" "Octicons" );;
-                pomicons) patches=( "${patches[@]}" "Pomicons" );;
-              esac;;
-            *)
-              echo "Unknown option --${OPTARG}" >&2
-              usage >&2;
-              exit 1
-              ;;
-          esac;;
+          echo "Unknown option --${OPTARG}" >&2
+          usage >&2;
+          exit 1
+          ;;
       esac;;
 
     *)
@@ -132,6 +109,8 @@ while getopts "$optspec" optchar; do
   esac
 done
 shift $((OPTIND-1))
+
+version
 
 # Set source and target directories, default: all fonts
 nerdfonts_root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/patched-fonts"
@@ -162,40 +141,20 @@ implode() {
     # $3... are the elements to join
     local retname=$1 sep=$2 ret=$3
     shift 3 || shift $(($#))
-    printf -v "$retname" "%s" "$ret${*/#/$sep}"
+    while [ $# -gt 0 ]; do
+        ret=$ret$sep$1
+        shift
+    done
+    printf -v "$retname" "%s" "$ret"
 }
-find_include=
-find_exclude=
 
-# If we have patches or compat, define what to include
-include=()
-if [ -n "${patches[*]}" ]; then
-  include=( "${include[@]}" "${patches[@]}" )
-fi
-if [ -n "${compat[*]}" ]; then
-  include=( "${include[@]}" "${compat[@]}" )
-fi
-# Delete empty elements
-for i in "${!include[@]}"; do
-  [ "${include[$i]}" = '' ] && unset include["$i"]
-done
-if [ -n "${include[*]}" ]; then
-  implode find_include "*' -and -name '*" "${include[@]}"
-  find_include="-and -name '*${find_include}*'"
-fi
-
-# Exclude everything we didn’t include
-exclude=("Complete" "Font Awesome" "Font Linux" "Octicons" "Pomicons" "Nerd Font*Mono" "Windows Compatible")
-for delete in "${include[@]}"; do
-  exclude=( "${exclude[@]/$delete}" )
-done
-# Delete empty elements
-for i in "${!exclude[@]}"; do
-  [ "${exclude[$i]}" = '' ] && unset exclude["$i"]
-done
-if [ -n "${exclude[*]}" ]; then
-  implode find_exclude "*' -and \\! -name '*" "${exclude[@]}"
-  find_exclude="-and \\! -name '*${find_exclude}*'"
+# Which Nerd Font variant
+if [ "$variant" = "M" ]; then
+  find_filter="-name '*NerdFontMono*'"
+elif [ "$variant" = "P" ]; then
+  find_filter="-name '*NerdFontPropo*'"
+else
+  find_filter="-not -name '*NerdFontMono*' -and -not -name '*NerdFontPropo*' -and -name '*NerdFont*'"
 fi
 
 # Construct directories to be searched
@@ -203,7 +162,7 @@ implode find_dirs "\" \"" "${nerdfonts_dirs[@]}"
 find_dirs="\"$find_dirs\""
 
 # Put it all together into the find command we want
-find_command="find $find_dirs \\( \\( -name '*.[o,t]tf' -or -name '*.pcf.gz' \\) $find_include $find_exclude \\) -type f -print0"
+find_command="find $find_dirs -iname '*.[ot]tf' $find_filter -type f -print0"
 
 # Find all the font files and store in array
 files=()
@@ -218,7 +177,7 @@ done < <(eval "$find_command")
 # Get list of file names without extensions
 files_dedup=( "${files[@]}" )
 for i in "${!files_dedup[@]}"; do
-  files_dedup[$i]="${files_dedup[$i]%.*}"
+  files_dedup[i]="${files_dedup[$i]%.*}"
 done
 
 # Remove duplicates
@@ -229,7 +188,7 @@ for i in "${!files_dedup[@]}"; do
       ext="${files[$i]##*.}"
       # Only remove if the extension is the one we don’t want
       if [ "$ext" != "$extension" ]; then
-        unset files["$i"]
+        unset "${files[$i]}"
       fi
     fi
   done
@@ -238,20 +197,31 @@ done
 # Get target root directory
 if [[ $(uname) == 'Darwin' ]]; then
   # MacOS
-  if [[ "system" == "$installpath" ]]; then
-    font_dir="/Library/Fonts"
-  else
-    font_dir="$HOME/Library/Fonts"
-  fi
+  sys_share_dir="/Library"
+  usr_share_dir="$HOME/Library"
+  font_subdir="Fonts"
 else
   # Linux
-  if [[ "system" == "$installpath" ]]; then
-    font_dir="/usr/local/share/fonts"
-  else
-    font_dir="$HOME/.local/share/fonts"
-  fi
+  sys_share_dir="/usr/local/share"
+  usr_share_dir="$HOME/.local/share"
+  font_subdir="fonts"
 fi
-font_dir="${font_dir}/NerdFonts"
+if [ -n "${XDG_DATA_HOME}" ]; then
+  usr_share_dir="${XDG_DATA_HOME}"
+fi
+sys_font_dir="${sys_share_dir}/${font_subdir}/NerdFonts"
+usr_font_dir="${usr_share_dir}/${font_subdir}/NerdFonts"
+
+if [[ "system" == "$installpath" ]]; then
+  font_dir="${sys_font_dir}"
+else
+  font_dir="${usr_font_dir}"
+fi
+
+if [ "${#files[@]}" -eq 0 ]; then
+  echo "Did not find any fonts to install"
+  exit 1
+fi
 
 #
 # Take the desired action
@@ -261,7 +231,7 @@ case $mode in
   list)
     for file in "${files[@]}"; do
       file=$(basename "$file")
-      echo "$font_dir/${file#$nerdfonts_root_dir/}"
+      echo "$font_dir/${file#"$nerdfonts_root_dir"/}"
     done
     exit 0
     ;;
@@ -284,12 +254,29 @@ case $mode in
         ;;
     esac;;
 
+  remove)
+    if [[ "true" == "$dry" ]]; then
+      echo "Dry run. Would issue these commands:"
+      [ "$quiet" = false ] && echo rm -rfv "$sys_font_dir" "$usr_font_dir"
+      [ "$quiet" = true ] && echo rm -rf "$sys_font_dir" "$usr_font_dir"
+    else
+      [ "$quiet" = false ] && rm -rfv "$sys_font_dir" "$usr_font_dir"
+      [ "$quiet" = true ] && rm -rf "$sys_font_dir" "$usr_font_dir"
+    fi
+    font_dir="$sys_font_dir $usr_font_dir"
+    ;;
+
 esac
 
 # Reset font cache on Linux
 if [[ -n $(command -v fc-cache) ]]; then
-  [ "$quiet" = false ] && fc-cache -vf "$font_dir"
-  [ "$quiet" = true ] && fc-cache -f "$font_dir"
+  if [[ "true" == "$dry" ]]; then
+    [ "$quiet" = false ] && echo fc-cache -vf "$font_dir"
+    [ "$quiet" = true ] && echo fc-cache -f "$font_dir"
+  else
+    [ "$quiet" = false ] && fc-cache -vf "$font_dir"
+    [ "$quiet" = true ] && fc-cache -f "$font_dir"
+  fi
   case $? in
     [0-1])
       # Catch fc-cache returning 1 on a success

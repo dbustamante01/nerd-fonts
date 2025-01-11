@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="images/nerd-fonts-logo.png" alt="Nerd Fonts Logo" />
+  <img src="images/nerd-fonts-logo.svg" alt="Nerd Fonts Logo" />
 </h1>
 
 [![GitHub release][img-version-badge-with-logo]][repo]&nbsp;[![Gitter][img-gitter-badge]][gitter]&nbsp;[![CodeClimate][img-code-climate-badge]][code-climate]&nbsp;[![Code of Conduct][coc-badge]][coc]&nbsp;[![PRs Welcome][prs-badge]][prs]&nbsp;&nbsp;&nbsp;[![Windows Logo][w-top]](#patched-fonts)&nbsp;&nbsp;&nbsp;[![macOS (OSX) Logo][m-top]](#patched-fonts)&nbsp;&nbsp;&nbsp;[![Linux Logo][l-top]](#patched-fonts)
@@ -32,14 +32,14 @@
 [**TL;DR**](#tldr)
 
 [**安装选项**](#font-installation)
-  * [**1 - 手动**](#option-1-download-and-install-manually)
-  * [**2 - 下载发布存档**](#option-2-release-archive-download)
-  * [**3 - 安装脚本**](#option-3-install-script)
-  * [**4 - Homebrew Fonts (macOS (OS X))**](#option-4-homebrew-fonts)
-  * [**5 - 克隆 Repo**](#option-5-clone-the-repo)
-  * [**6 - Ad Hoc Curl 下载**](#option-6-ad-hoc-curl-download)
-  * [**7 - Arch User Repository (AUR) (Arch Linux)**](#option-7-unofficial-arch-user-repository-aur)
-  * [**8 - 你自己的字体补丁**](#option-8-patch-your-own-font)
+  * [**1 - 手动**](#选项1-手动下载并安装)
+  * [**2 - 下载发布存档**](#选项2-下载发布存档)
+  * [**3 - 安装脚本**](#选项3-安装脚本)
+  * [**4 - Homebrew Fonts (macOS (OS X))**](#选项4-homebrew-字体)
+  * [**5 - 克隆 Repo**](#选项5-克隆-repo)
+  * [**6 - Ad Hoc Curl 下载**](#选项6-ad-hoc-curl-下载)
+  * [**8 - Arch Linux Repository (Community, AUR)**](#选项7-非官方-arch-community-repository)
+  * [**8 - 你自己的字体补丁**](#选项8-打包你的个人字体)
 
 [**特征**](#features)
   * [**Glyph/Icon sets**](#glyph-sets)
@@ -71,13 +71,13 @@
 _如果你..._
 
   * `选项 1.` 需要**快速**从[`patched-fonts/` directory](#patched-fonts)下载一个 **独立字体**
-  * `选项 2.` 需要去下载包含粗体、斜体等等一系列字体的 **字体家族**，请见 [下载档案](#option-2-release-archive-download)
-  * `选项 3.` 需要**自动安装**或使用**脚本**，请见 [安装脚本](#option-3-install-script)
-  * `选项 4.` 是**macOS**的使用者，并且想要使用**Homebrew**，请见 [Homebrew Fonts](#option-4-homebrew-fonts)
-  * `选项 5.` 想要 **完全控制**，请见 [克隆这个 repo](#option-5-clone-the-repo)
-  * `选项 6.` 想要使用 **`curl` command** 或者使用 **scripts**，请见 [Ad Hoc Curl 下载](#option-6-ad-hoc-curl-download)
-  * `选项 7.` 是**Arch Linux**的使用者，并且想要使用**AUR packages**，请见 [Unofficial Arch User Repositories](#option-7-unofficial-arch-user-repository-aur)
-  * `选项 8.` 想要打包你自定义的字体，请见 [字体补丁](#option-8-patch-your-own-font)
+  * `选项 2.` 需要去下载包含粗体、斜体等等一系列字体的 **字体家族**，请见 [下载档案](#选项2-下载发布存档)
+  * `选项 3.` 需要**自动安装**或使用**脚本**，请见 [安装脚本](#选项3-安装脚本)
+  * `选项 4.` 是**macOS**的使用者，并且想要使用**Homebrew**，请见 [Homebrew Fonts](#选项4-homebrew-字体)
+  * `选项 5.` 想要 **完全控制**，请见 [克隆这个 repo](#选项5-克隆-repo)
+  * `选项 6.` 想要使用 **`curl` command** 或者使用 **scripts**，请见 [Ad Hoc Curl 下载](#选项6-ad-hoc-curl-下载)
+  * `选项 7.` 是**Arch Linux**的使用者，并且想要使用**Community packages**，请见 [Arch Community Repositories](#选项7-非官方-arch-community-repository)
+  * `选项 8.` 想要打包你自定义的字体，请见 [字体补丁](#选项8-打包你的个人字体)
 
 ## 特征
 * [FontForge Python script](#font-patcher) 可以打包任何字体
@@ -85,8 +85,8 @@ _如果你..._
   * 更多详情请见 [**Font Patcher**](#font-patcher) 段落
 * **`50`** 已经 [打包了字体家族](#patched-fonts)
 * Over **`1,571,470`** 独立的 组合/变型 字体 [(更多详情)](#combinations)
-* Over **`1,300`** 字形/图标 组合 [(更多详情)](#combinations)
-  * 当前的字形集包括： [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome],  [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Linux][font-linux], [Pomicons][gabrielelana-pomicons]
+* Over **`9,000`** 字形/图标 组合 [(更多详情)](#combinations)
+  * 当前的字形集包括： [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome],  [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-logos], [Pomicons][gabrielelana-pomicons]
 * 每种字体的**Monospaced (fixed-pitch, fixed-width)** _和_ **double-width (non-monospaced)** 版本
   * 这指的是Nerd Font字形本身，并不一定需要将字体作为一个整体考虑
 * 一个 开发者/贡献者提供了 [bash script](#gotta-patch-em-all) 来为所有字体再打包
@@ -95,59 +95,6 @@ _如果你..._
 ## 字形集
 
 :mag: :mag: 你现在可以通过[NerdFonts.com][Cheat Sheet]中的[Cheat Sheet][]对字形进行搜索
-
-### Seti-UI + 自定义
-> 基于 [Seti-UI] Icomoon 的额外自定义字形。
-
-![image](images/fontforge-glyph-set-1.png)
-
-### [Devicons][vorillaz-devicons]
-> 一个为开发者，code jedis，ninjas，HTTPsters，evangelists 和 nerds(sic)制作的图标字体。 / ([repo][vorillaz-devicons]) / ([website](https://vorillaz.github.io/devicons/))
-
-![image](images/fontforge-glyph-set-2.png)
-
-### [Font Awesome][font-awesome]
-> 字体图标和 CSS 工具包。 / ([repo][font-awesome]) / ([website](http://fontawesome.io/))
-
-![image](images/fontforge-glyph-set-font-awesome-1.png)
-![image](images/fontforge-glyph-set-font-awesome-2.png)
-![image](images/fontforge-glyph-set-font-awesome-3.png)
-![image](images/fontforge-glyph-set-font-awesome-4.png)
-
-### [Font Awesome Extension][font-awesome-extension]
-> 简单的 Font Awesome 补充包。 / ([repo][font-awesome-extension]) / ([website](https://andrelzgava.github.io/font-awesome-extension/))
-
-![image](images/fontforge-glyph-set-font-awesome-extension-1.png)
-
-### [Octicons][octicons]
-> GitHub's 图标. / ([repo][octicons]) / ([website](https://octicons.github.com))
-
-#### Nerd Font Complete Codepoints:*
-
-![image](images/fontforge-glyph-set-octicons.png)
-
-<sub>* To avoid conflicts between icon sets, these were modified in the 'Complete' fonts. To view the original codepoints see the [Wiki](https://github.com/ryanoasis/nerd-fonts/wiki/Codepoint-Conflicts).</sub>
-
-### [Powerline Extra Symbols][ryanoasis-powerline-extra-symbols]
-> 提供额外的 Powerline separator 字体 和 a column number glyph (CN). / ([repo][ryanoasis-powerline-extra-symbols])
-
-![image](https://raw.githubusercontent.com/ryanoasis/powerline-extra-symbols/master/fontforge.png)
-
-### [IEC Power Symbols][website-iecpower]
-> 向Unicode中加入新字符  / ([website][website-iecpower])
-
-![image](images/fontforge-glyph-set-font-iec-power-1.png)
-![image](images/fontforge-glyph-set-font-iec-power-2.png)
-
-### [Font Linux][font-linux]
-> Font-linux 是一个包含LOGO和linux流行布局的图标字体。 / ([repo][font-linux])
-
-![image](images/fontforge-glyph-set-font-linux.png)
-
-### [Pomicons][gabrielelana-pomicons]
-> 8 个符号 ["Pomodoro Technique"®](https://cirillocompany.de/pages/pomodoro-technique). / ([repo][gabrielelana-pomicons])
-
-![image](images/fontforge-glyph-set-pomicons.png)
 
 ### Shell中的Icon 名称
 
@@ -158,7 +105,7 @@ _如果你..._
 - `i_fa.sh` - Font Awesome (675 icons, 111 aliases)
 - `i_fae.sh` - Font Awesome Extension (170 icons)
 - `i_iec.sh` - IEC Power Symbols (5 icons)
-- `i_linux.sh` - Font Linux (20 icons)
+- `i_logos.sh` - Font Logos (20 icons)
 - `i_oct.sh` - Octicons (172 icons)
 - `i_ple.sh` - Powerline Extra Symbols (37 icons, 2 aliases, 16 does not have an established name)
 - `i_pom.sh` - Pomicons (11 icons)
@@ -173,60 +120,79 @@ echo $i_oct_heart
 # ♥
 ```
 
-**NOTE:** You have to use one of the Nerd Fonts to see correct icons for some icon sets (Devicons, Font Awesome Extension, Font Linux), but other sets should work with their standard fonts too.
+**NOTE:** You have to use one of the Nerd Fonts to see correct icons for some icon sets (Devicons, Font Awesome Extension, Font Logos), but other sets should work with their standard fonts too.
 
 
 ## 字体补丁
 
-| Font Name                                         | Font Name and Repository          |\*RFN | EM Size | Status            |
-|:--------------------------------------------------|:----------------------------------|:-----|:--------|:------------------|
-| [3270 Nerd Font][p-3270]                          | [3270][f-3270]                    | NO   | 1000    | ![w2] ![m2] ![l2] |
-| [Anonymice Nerd Font][p-anonymous-pro]            | [Anonymous Pro][f-a-pro]          | NO   | 2048    | ![w] ![m2] ![l]   |
-| [Aurulent Sans Mono Nerd Font][p-aurulent]        |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
-| [Bitstream Vera Sans Mono Nerd Font][p-bitstream] |                                   | NO   | 2048    | ![w] ![m2] ![l]   |
-| [Code New Roman Nerd Font][p-code-nr]             |                                   | NO   | 2048    | ![w] ![m2] ![l]   |
-| [DejaVu Sans Mono Nerd Font][p-dejavu]            |                                   | NO   | 2048    | ![w] ![m2] ![l]   |
-| [Droid Sans Mono Nerd Font][p-droid]              |                                   | NO   | 2048    | ![w] ![m2] ![l]   |
-| [Fantasque Sans Nerd Font][p-fantasque]           | [Fantasque Sans][f-fant]          | NO   | 2048    | ![w] ![m2] ![l]   |
-| [Fura Code Nerd Font][p-fira-code]                | [Fira][f-fira-code]               | YES  | 1000    | ![w] ![m2] ![l]   |
-| [Fura Mono Nerd Font][p-fira-mono]                | [Fira][f-fira-mono]               | YES  | 1000    | ![w] ![m2] ![l]   |
-| [Gohu Nerd Font][p-gohu]                          | [Gohu][f-gohu]                    | NO   | 1000    | ![w2] ![m2] ![l2] |
-| [Hasklug Nerd Font][p-hasklig]                    | [Hasklig][f-hasklig]              | YES  | 1000    | ![w] ![m2] ![l]   |
-| [Heavy Data Mono Nerd Font][p-heavy-data]         |                                   | NO   | 2048    | ![w] ![m2] ![l]   |
-| [Hermut Nerd Font][p-hermit]                      |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
-| [Inconsolata Nerd Font][p-inconsolata]            |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
-| [Inconsolata Go Nerd Font][p-inconsolata-go]      |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
-| [Iosevka Nerd Font][p-iosevka]                    | [Iosevka][f-iosevka]              | YES  | 1000    | [#83][s-iosevka]  |
-| [JetBrains Mono][p-jetbrains-mono]                | [JetBrains Mono][f-jetbrains-mono]| NO   | 1000    | ![w] ![m2] ![l]   |
-| [Knack Nerd Font][p-hack]                         | [Hack][f-hack]                    | YES  | 2048    | ![w] ![m2] ![l]   |
-| [Lekton Nerd Font][p-lekton]                      |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
-| [Literation Mono Nerd Font][p-liberation]         | [Liberation][f-liberation]        | YES  | 2048    | ![w] ![m2] ![l]   |
-| [Meslo Nerd Font][p-meslo]                        |                                   | NO   | 2048    | ![w] ![m2] ![l]   |
-| [Monofur Nerd Font][p-monofur]                    |                                   | NO   | 2400    | ![w] ![m2] ![l]   |
-| [Monoid Nerd Font][p-monoid]                      |                                   | NO   | 1536    | ![w] ![m2] ![l]   |
-| [Mononoki Nerd Font][p-mononoki]                  | [Mononoki][f-mononoki]            | NO   | 1024    | ![w] ![m2] ![l]   |
-| [M+ (MPlus) Nerd Font][p-mplus]                   |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
-| [ProFont (Windows tweaked) Nerd Font][p-profont]  |                                   | NO   | 1200    | ![w] ![m2] ![l]   |
-| [ProFont (x11) Nerd Font][p-profont]              |                                   | NO   | 1000    | [FAILING]         |
-| [ProggyClean Nerd Font][p-proggy-clean]           |                                   | NO   | 2048    | [FAILING]         |
-| [Roboto Mono][p-roboto]                           |                                   | NO   | 2048    | [FAILING]         |
-| [Sauce Code Nerd Font][p-source-code-pro]         | [Source][f-source]                | YES  | 1000    | ![w] ![m2] ![l]   |
-| [Shure Tech Mono Nerd Font][p-share-tech-mono]    | [Share Tech Mono][f-share]        | YES  | 1000    | ![w] ![m2] ![l]   |
-| [Space Mono Nerd Font][p-space-mono]              | [Space Mono][f-space]             | NO   | 1000    | ![w] ![m2] ![l]   |
-| [Terminess Nerd Font][p-terminus]                 | [Terminus Font][f-terminus]       | YES  | 1000    | ![w] ![m2] ![l]   |
-| [Ubuntu Nerd Font][p-ubuntu]                      |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
-| [Ubuntu Mono Nerd Font][p-ubuntu-mono]            |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
+| Font Name                                         | Font Name and Repository          | ver   |\*RFN | Status            |
+|:--------------------------------------------------|:----------------------------------|:------|:-----|:------------------|
+| [3270 Nerd Font][p-3270]                          | [3270][f-3270]                    | 3.0.1 | NO   | ![w] ![m2] ![l]   |
+| [Agave][p-agave]                                  | [Agave][f-agave]                  | 37    | NO   | ![w] ![m2] ![l]   |
+| [AnonymicePro Nerd Font][p-anonymous-pro]         | [Anonymous Pro][f-a-pro]          | 1.002 | YES  | ![w] ![m2] ![l]   |
+| [Arimo][p-arimo]                                  | [Arimo][f-arimo]                  | 1.33  | NO   | ![w] ![m2] ![l]   |
+| [Aurulent Sans Mono Nerd Font][p-aurulent]        | Stephen G. Hartke                 |       | NO   | ![w] ![m2] ![l]   |
+| [BigBlueTerminal][p-bigblueterm]                  | VileR                             |       | NO   | ![w] ![m2] ![l]   |
+| [Bitstrom Wera Nerd Font][p-bitstream]            | Bitstream Inc                     | 1.1   | YES  | ![w] ![m2] ![l]   |
+| [Blex Mono][p-blex]                               | [IBM Plex Mono][f-ibm-plex]       | 2.3   | YES  | ![w] ![m2] ![l]   |
+| [Caskaydia Cove Nerd Font][p-cascadia]            | [Cascadia Code][f-cascadia]       |2111.01| YES  | ![w] ![m2] ![l]   |
+| [Code New Roman Nerd Font][p-code-nr]             | Sam Radian                        | 2.0   | NO   | ![w] ![m2] ![l]   |
+| [Comic Shanns Mono Nerd Font][p-comic]            | [Comic Shanns Mono][f-comic]      | 1.3   | NO   | ![w] ![m2] ![l]   |
+| [Cousine Nerd Font][p-cousine]                    | [Cousine][f-cousine]              | 1.211 | NO   | ![w] ![m2] ![l]   |
+| [DaddyTimeMono][p-daddytimemono]                  | [DaddyTimeMono][f-daddytimemono]  | 1.2.3 | NO   | ![w] ![m2] ![l]   |
+| [DepartureMono Nerd Font][p-departuremono]        | [Departure Mono][f-departuremono] | 1.422 | NO   | ![w] ![m2] ![l]   |
+| [DejaVu Sans Mono Nerd Font][p-dejavu]            | [DejaVu][f-dejavu]                | 2.37  | NO   | ![w] ![m2] ![l]   |
+| [Droid Sans Mono Nerd Font][p-droid]              | Ascender Corp                     |1.00-113| NO   | ![w] ![m2] ![l]   |
+| [Fantasque Sans Nerd Font][p-fantasque]           | [Fantasque Sans][f-fant]          | 1.8.0 | NO   | ![w] ![m2] ![l]   |
+| [Fira Code Nerd Font][p-fira-code]                | [Fira Code][f-fira-code]          | 6.2   | NO   | ![w] ![m2] ![l]   |
+| [Fira Mono Nerd Font][p-fira-mono]                | [Fira][f-fira-mono]               | 3.206 | NO   | ![w] ![m2] ![l]   |
+| [Go Mono Nerd Font][p-go-mono]                    | [Go-Mono][f-go-mono]              | 2.010 | NO   | ![w] ![m2] ![l]   |
+| [Gohu Nerd Font][p-gohu]                          | [Gohu TTF][f-gohu2],[Gohu][f-gohu]| 2.0   | NO   | ![w] ![m2] ![l]   |
+| [Hack Nerd Font][p-hack]                          | [Hack][f-hack]                    | 3.003 | NO   | ![w] ![m2] ![l]   |
+| [Hasklug Nerd Font][p-hasklig]                    | [Hasklig][f-hasklig]              | 1.2   | YES  | ![w] ![m2] ![l]   |
+| [Heavy Data Mono Nerd Font][p-heavy-data]         | Vic Fieger                        | 1     | NO   | ![w] ![m2] ![l]   |
+| [Hurmit Nerd Font][p-hermit]                      | [Hermit][f-hermit]                | 2.0   | YES  | ![w] ![m2] ![l]   |
+| [iM-Writing][p-im-writing]                        | [iA-Writer][f-ia-writer]          | Dec 2018 | YES  | ![w] ![m2] ![l]   |
+| [Inconsolata Nerd Font][p-inconsolata]            | [Inconsolata][f-inconsolata]      | 3.000 | NO   | ![w] ![m2] ![l]   |
+| [Inconsolata Go Nerd Font][p-inconsolata-go]      | [InconsolataGo][f-inconsolatago]  | 1.013 | NO   | ![w] ![m2] ![l]   |
+| [Inconsolata LGC Nerd Font][p-inconsolata-lgc]    | [Inconsolata LGC][f-inconsolatalgc] | 1.3 | NO   | ![w] ![m2] ![l]   |
+| [Iosevka Nerd Font][p-iosevka]                    | [Iosevka][f-iosevka]              |22.1.0 | NO   | ![w] ![m2] ![l]   |
+| [Iosevka Term Nerd Font][p-iosevka-term]          | [Iosevka Term][f-iosevka]         |22.1.0 | NO   | ![w] ![m2] ![l]   |
+| [JetBrains Mono][p-jetbrains-mono]                | [JetBrains Mono][f-jetbrains-mono]| 2.304 | NO   | ![w] ![m2] ![l]   |
+| [Lekton Nerd Font][p-lekton]                      | [Lekton][f-lekton]                | 34    | NO   | ![w] ![m2] ![l]   |
+| [Literation Mono Nerd Font][p-liberation]         | [Liberation][f-liberation]        | 2.1.5 | YES  | ![w] ![m2] ![l]   |
+| [Lilex Nerd Font][p-lilex]                        | [Lilex][f-lilex]                  | 2.300 | NO   | ![w2] ![m2] ![l]  |
+| [Meslo Nerd Font][p-meslo]                        | [Meslo][f-meslo]                  | 1.21  | NO   | ![w] ![m2] ![l]   |
+| [Monofur Nerd Font][p-monofur]                    | Tobias B Koehler                  | 1.0   | NO   | ![w] ![m2] ![l]   |
+| [Monoid Nerd Font][p-monoid]                      | [Monoid][f-monoid]                | 0.61  | NO   | ![w] ![m2] ![l]   |
+| [Mononoki Nerd Font][p-mononoki]                  | [Mononoki][f-mononoki]            | 1.6   | YES  | ![w] ![m2] ![l]   |
+| [M+ (MPlus) Nerd Font][p-mplus]                   | [M+ Fonts][f-mplus]               |2023/03| NO   | ![w] ![m2] ![l]   |
+| [Noto][p-noto]                                    | [Noto][f-noto]                    | div   | NO   | ![w] ![m2] ![l]   |
+| [OpenDyslexic][p-opendyslexic]                    | [OpenDyslexic][f-opendyslexic]    | 2.001 | NO   | ![w] ![m2] ![l]   |
+| [Overpass][p-overpass]                            | [Overpass][f-overpass]            | 3.0.5 | NO   | ![w] ![m2] ![l]   |
+| [ProFont (Windows tweaked) Nerd Font][p-profont]  | [ProFont][f-profont]              | 2.3   | NO   | ![w] ![m2] ![l]   |
+| [ProFont (x11) Nerd Font][p-profont]              | [ProFont][f-profont]              | 2.2   | NO   | ![w] ![m2] ![l]   |
+| [ProggyClean Nerd Font][p-proggy-clean]           | Tristan Grimmer                   |2004/04/15| NO   | Imperfect         |
+| [Roboto Mono][p-roboto]                           | [Roboto Mono][f-roboto]           | 3.0   | NO   | ![w] ![m2] ![l]   |
+| [Sauce Code Nerd Font][p-source-code-pro]         | [Source][f-source]                | 2.038 | YES  | ![w] ![m2] ![l]   |
+| [Shure Tech Mono Nerd Font][p-share-tech-mono]    | [Share Tech Mono][f-share]        | 1.003 | YES  | ![w] ![m2] ![l]   |
+| [Space Mono Nerd Font][p-space-mono]              | [Space Mono][f-space]             | 1.001 | NO   | ![w] ![m2] ![l]   |
+| [Terminess Nerd Font][p-terminus]                 | [Terminus TTF][f-terminus]        |4.49.2 | YES  | ![w] ![m2] ![l]   |
+| [Tinos][p-tinos]                                  | [Tinos][f-tinos]                  | 1.23  | NO   | ![w] ![m2] ![l]   |
+| [Ubuntu Nerd Font][p-ubuntu]                      | [Ubuntu Font][f-ubuntu]           | 0.83  | NO   | ![w] ![m2] ![l]   |
+| [Ubuntu Mono Nerd Font][p-ubuntu-mono]            | [Ubuntu Font][f-ubuntu]           | 0.80  | NO   | ![w] ![m2] ![l]   |
+| [Victor Mono][p-victor]                           | [Victor Mono][f-victor]           | 1.5.4 | NO   | ![w] ![m2] ![l]   |
 
 <sub>_*RFN = Reserved Font Name_</sub>
 
 ## 字体集
 
-- 超过 **`1,571,470`** 独立的 变化/组合(Power Set)字体包：
+- 超过 **`1,485,000`** 独立的 变化/组合(Power Set)字体包：
   - **`50个`** 字体合集
-  - **`697个`** 字体家族
-  - **`2,788个`** ‘完全’的 变化/组合字体
-  - **`1,571,470个`** _有可能的_ 变化/组合字体
-  - **`1,574,258个`** 总字体数 (2,788 + 1,571,470)
+  - **`719`** 字体家族
+  - **`2,876`** ‘完全’的 变化/组合字体
+  - **`'1,485,410'`** _有可能的_ 变化/组合字体
+  - **`1,488,286`** 总字体数 (2,876 + 1,428,110)
 - 每种字体的组合都是任意 [Variations](#variations)的组合
 
 ### Variations
@@ -236,7 +202,7 @@ echo $i_oct_heart
 - [Font Awesome][font-awesome]
 - [Font Awesome Extension][font-awesome-extension]
 - [GitHub Octicons][octicons]
-- [Font Linux][font-linux]
+- [Font Logos][font-logos]
 - [Powerline Extra Symbols][ryanoasis-powerline-extra-symbols]
 - [IEC Power Symbols][website-iecpower]
 - [Pomicons][gabrielelana-pomicons]
@@ -286,11 +252,10 @@ _注_: **Requires cloning** the repo as of now
 
 > 适用于 **macOS系统**的**Homebrew**使用者。
 
-所有字体都可以通过 [Homebrew 字体](https://github.com/caskroom/homebrew-fonts) 从 macOS (OS X)平台上找到
+所有字体都可以通过 [Homebrew 字体](https://github.com/Homebrew/homebrew-cask) 从 macOS (OS X)平台上找到
 
 ```sh
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
+brew install font-hack-nerd-font
 ```
 
 ### `选项5: 克隆 Repo`
@@ -312,7 +277,7 @@ git clone --depth 1
 
 ```sh
 mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
 _注:_ deprecated alternative paths: `~/.fonts`
@@ -320,27 +285,15 @@ _注:_ deprecated alternative paths: `~/.fonts`
 #### macOS (OS X)
 
 ```sh
-cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
-### `选项7: 非官方 Arch User Repository (AUR)`
+### `选项7: 非官方 Arch Community Repository`
 
-> 适用于 **Arch Linux** 下使用 **AUR packages**的情况
+> 适用于 **Arch Linux** 下使用 **Community packages**的情况
 
-下列字体可以在Arch Linux通过 [AUR packages](https://aur.archlinux.org/) 下载：
-
-* [Nerd Fonts Complete (double-width)](https://aur.archlinux.org/packages/nerd-fonts-complete/)
-* [Nerd Fonts Complete (single-width)](https://aur.archlinux.org/packages/nerd-fonts-complete-mono-glyphs/)
-* [Nerd Fonts DejaVu Complete](https://aur.archlinux.org/packages/nerd-fonts-dejavu-complete/)
-* [Nerd Fonts Source Code Pro Complete](https://aur.archlinux.org/packages/nerd-fonts-source-code-pro/)
-* [Nerd Fonts Git (out of date)](https://aur.archlinux.org/packages/nerd-fonts-git/)
-* [Nerd Fonts Fira Code](https://aur.archlinux.org/packages/nerd-fonts-fira-code/)
-* [Nerd Fonts Terminus](https://aur.archlinux.org/packages/nerd-fonts-terminus/)
-* [Nerd Fonts Liberation Mono](https://aur.archlinux.org/packages/nerd-fonts-liberation-mono/)
-* [Nerd Fonts Go Mono](https://aur.archlinux.org/packages/nerd-fonts-go-mono/)
-* [Nerd Fonts Anonymous Pro](https://aur.archlinux.org/packages/nerd-fonts-anonymous-pro/)
-* [Nerd Fonts Noto](https://aur.archlinux.org/packages/nerd-fonts-noto/)
-* [Nerd Fonts Inconsolata](https://aur.archlinux.org/packages/nerd-fonts-inconsolata/)
+Most fonts are available via [Arch Community packages](https://archlinux.org/packages/?sort=&repo=Community&q=-nerd).
+Some special packages are [in AUR](https://aur.archlinux.org/packages?K=nerd-fonts-&outdated=off).
 
 ### `选项8: 打包你的个人字体`
 
@@ -359,7 +312,7 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 </h2>
 
 可以通过[VimDevIcons ➶][vim-devicons]打包你选中的字体:
-* 需要: Python 2 (or Python 3), python-fontforge package (version 20141231 或者更新版本，请见 [安装说明](http://designwithfontforge.com/en-US/Installing_Fontforge.html))
+* 需要: Python 3, python-fontforge package (version 20141231 或者更新版本，请见 [安装说明](http://designwithfontforge.com/en-US/Installing_Fontforge.html))
 * OSX上的替代安装方法为: `brew install fontforge`
 * 使用:
 
@@ -375,63 +328,82 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 
 ```
-usage: font-patcher [-h] [-v] [-s] [-l] [-q] [-w] [-c] [--fontawesome]
-                    [--fontawesomeextension] [--fontlinux] [--octicons]
-                    [--powersymbols] [--pomicons] [--powerline]
-                    [--powerlineextra] [--custom [CUSTOM]]
-                    [--postprocess [POSTPROCESS]]
-                    [--progressbars | --no-progressbars] [--careful]
-                    [-ext [EXTENSION]] [-out [OUTPUTDIR]]
+Nerd Fonts Patcher v3.0.2 (4.4.0) (ff 20230101)
+usage: font-patcher [-h] [-v] [-s] [-l] [-q] [-c] [--careful] [--removeligs] [--postprocess [POSTPROCESS]] [--configfile [CONFIGFILE]] [--custom [CUSTOM]]
+                    [-ext [EXTENSION]] [-out [OUTPUTDIR]] [--glyphdir [GLYPHDIR]] [--makegroups [{-1,0,1,2,3,4,5,6}]] [--variable-width-glyphs]
+                    [--has-no-italic] [--progressbars | --no-progressbars] [--debug [{0,1,2,3}]] [--dry] [--xavgcharwidth [XAVGWIDTH]] [--fontawesome]
+                    [--fontawesomeextension] [--fontlogos] [--octicons] [--codicons] [--powersymbols] [--pomicons] [--powerline] [--powerlineextra]
+                    [--material] [--weather]
                     font
 
 Nerd Fonts Font Patcher: patches a given font with programming and development related glyphs
 
 * Website: https://www.nerdfonts.com
-* Version: 1.2.0
+* Version: 3.0.2
 * Development Website: https://github.com/ryanoasis/nerd-fonts
-* Changelog: https://github.com/ryanoasis/nerd-fonts/blob/master/changelog.md
+* Changelog: https://github.com/ryanoasis/nerd-fonts/blob/-/changelog.md
 
 positional arguments:
   font                  The path to the font to patch (e.g., Inconsolata.otf)
 
-optional arguments:
-  -h, --help            显示帮助信息和退出
-  -v, --version         显示程序版本号和退出
-  -s, --mono, --use-single-width-glyphs
-                        设置生成的字体是single-width还是double-width (默认是 double-width)
+options:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -s, --mono            Whether to generate the glyphs as single-width not double-width (default is double-width)
   -l, --adjust-line-height
-                        设置是否调整 line heights (一般应该尝试 center powerline separators)
+                        Whether to adjust line heights (attempt to center powerline separators more evenly)
   -q, --quiet, --shutup
-                        不生成 verbose output
-  -w, --windows         将内部字体名称限制在31个字符内 (为了 Windows 兼容性)
-  -c, --complete        加入所有可用的字体
-  --fontawesome         加入 Font Awesome Glyphs字体 (http://fontawesome.io/)
-  --fontawesomeextension
-                        加入 Font Awesome 补充字体 (https://andrelzgava.github.io/font-awesome-extension/)
-  --fontlinux           加入 Font Linux 字体 (https://github.com/Lukas-W/font-linux)
-  --octicons            加入 Octicons 字体 (https://octicons.github.com)
-  --powersymbols        加入 IEC Power Symbols (https://unicodepowersymbol.com/)
-  --pomicons            加入 Pomicon 字体 (https://github.com/gabrielelana/pomicons)
-  --powerline           加入 Powerline 字体
-  --powerlineextra      加入 Powerline 字体 (https://github.com/ryanoasis/powerline-extra-symbols)
-  --custom [CUSTOM]     指定一个自定义图标字体，所有新字形都会在不缩放的情况下被拷贝。
+                        Do not generate verbose output
+  -c, --complete        Add all available Glyphs
+  --careful             Do not overwrite existing glyphs if detected
+  --removeligs, --removeligatures
+                        Removes ligatures specificed in JSON configuration file
   --postprocess [POSTPROCESS]
-                        指定一个针对后续进程的脚本
-  --progressbars        显示每个Glyph Set的完成度进度条
-  --no-progressbars     不显示每个Glyph Set的完成度进度条
-  --careful             如果发现了已经存在的字形，不要对它进行复写
+                        Specify a Script for Post Processing
+  --configfile [CONFIGFILE]
+                        Specify a file path for JSON configuration file (see sample: src/config.sample.json)
+  --custom [CUSTOM]     Specify a custom symbol font, all glyphs will be copied; absolute path suggested
   -ext [EXTENSION], --extension [EXTENSION]
-                        更改字体文件的文件格式去创建新文件 (e.g., ttf, otf)
+                        Change font file type to create (e.g., ttf, otf)
   -out [OUTPUTDIR], --outputdir [OUTPUTDIR]
-                        将修补后的字体文件输出到特定目录
+                        The directory to output the patched font file to
+  --glyphdir [GLYPHDIR]
+                        Path to glyphs to be used for patching
+  --makegroups [{-1,0,1,2,3,4,5,6}]
+                        Use alternative method to name patched fonts (recommended)
+  --variable-width-glyphs
+                        Do not adjust advance width (no "overhang")
+  --has-no-italic       Font family does not have Italic (but Oblique)
+  --progressbars        Show percentage completion progress bars per Glyph Set (default)
+  --no-progressbars     Don't show percentage completion progress bars per Glyph Set
+  --debug [{0,1,2,3}]   Verbose mode (optional: 1=just to file; 2*=just to terminal; 3=display and file)
+  --dry                 Do neither patch nor store the font, to check naming
+  --xavgcharwidth [XAVGWIDTH]
+                        Adjust xAvgCharWidth (optional: concrete value)
 
+Symbol Fonts:
+  --fontawesome         Add Font Awesome Glyphs (http://fontawesome.io/)
+  --fontawesomeextension
+                        Add Font Awesome Extension Glyphs (https://andrelzgava.github.io/font-awesome-extension/)
+  --fontlogos, --fontlinux
+                        Add Font Logos Glyphs (https://github.com/Lukas-W/font-logos)
+  --octicons            Add Octicons Glyphs (https://octicons.github.com)
+  --codicons            Add Codicons Glyphs (https://github.com/microsoft/vscode-codicons)
+  --powersymbols        Add IEC Power Symbols (https://unicodepowersymbol.com/)
+  --pomicons            Add Pomicon Glyphs (https://github.com/gabrielelana/pomicons)
+  --powerline           Add Powerline Glyphs
+  --powerlineextra      Add Powerline Glyphs (https://github.com/ryanoasis/powerline-extra-symbols)
+  --material, --materialdesignicons, --mdi
+                        Add Material Design Icons (https://github.com/templarian/MaterialDesign)
+  --weather, --weathericons
+                        Add Weather Icons (https://github.com/erikflowers/weather-icons)
 ```
 
 #### 例子
 
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -s -q
-	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --use-single-width-glyphs --quiet
+	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --mono --quiet
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -w
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --windows --quiet
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf --windows --pomicons --quiet
@@ -503,7 +475,7 @@ Repo References
 [font-awesome]:https://github.com/FortAwesome/Font-Awesome
 [font-awesome-extension]:https://github.com/AndreLZGava/font-awesome-extension
 [octicons]:https://github.com/primer/octicons
-[font-linux]:https://github.com/Lukas-W/font-linux
+[font-logos]:https://github.com/Lukas-W/font-linux
 [gabrielelana-pomicons]:https://github.com/gabrielelana/pomicons
 [Seti-UI]:https://atom.io/themes/seti-ui
 [ryanoasis-powerline-extra-symbols]:https://github.com/ryanoasis/powerline-extra-symbols
@@ -534,11 +506,11 @@ Link References
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAACWFBMVEXXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWkrXWko2FeWCAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAAI28AACNvATX8B%2FsAAAAHdElNRQfhBQMBMCLAfV85AAAAi0lEQVQ4y2NgIBYszkPmJc5ORZE9DgEJqNxmmPS%2B43AA4h5B5TIwbD5%2BHFnoKCoXYSBMBIW7CF0eAxChoPM4ARXHB4GCZEIKKA8H%2FCoWE1LAwIBfBVp6wQA1DPhVzMJMcyggCVuqxGI%2FLhWY6Z6QPKoK7HmHkDwDwxYC8gwMdSDprXiz6PHjpQxUBgCLDfI7GXNh5gAAAABJRU5ErkJggg%3D%3D
 
 [consolas]:https://www.microsoft.com/typography/fonts/family.aspx?FID=300
-[input-mono]:http://input.fontbureau.com/download/
+[input-mono]:http://input.djr.com/download/
 [pragmatapro]:https://www.fsd.it/shop/fonts/pragmatapro/
 
 [release]:https://github.com/ryanoasis/nerd-fonts/releases/latest "Latest Release (external link) ➶"
-[coc]:https://github.com/ryanoasis/nerd-fonts/blob/master/code_of_conduct.md "Contributor Covenant Code of Conduct"
+[coc]:https://github.com/ryanoasis/nerd-fonts/blob/-/code_of_conduct.md "Contributor Covenant Code of Conduct"
 [prs]:http://makeapullrequest.com "Make a Pull Request (external link) ➶"
 
 <!--
@@ -562,6 +534,7 @@ Font repos
 [f-gohu]:http://font.gohu.org/
 [f-mononoki]:https://madmalik.github.io/mononoki/
 [f-hasklig]:https://github.com/i-tu/Hasklig
+[f-departuremono]:https://github.com/rektdeckard/departure-mono
 
 <!--
 Patched Font internal links
@@ -571,6 +544,7 @@ Patched Font internal links
 [p-anonymous-pro]:patched-fonts/AnonymousPro
 [p-aurulent]:patched-fonts/AurulentSansMono
 [p-bitstream]:patched-fonts/BitstreamVeraSansMono
+[p-departuremono]:patched-fonts/DepartureMono
 [p-dejavu]:patched-fonts/DejaVuSansMono
 [p-droid]:patched-fonts/DroidSansMono
 [p-fantasque]:patched-fonts/FantasqueSansMono
